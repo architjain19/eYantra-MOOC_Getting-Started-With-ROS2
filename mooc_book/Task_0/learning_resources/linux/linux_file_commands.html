@@ -1,0 +1,422 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js navy">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Linux File Commands - e-Yantra Robotics Competition - ROS2 MOOC</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- 
+        <link rel="icon" href="../../../favicon.svg">
+         -->
+        <link rel="shortcut icon" href="../../../favicon.png">
+        <link rel="stylesheet" href="../../../css/variables.css">
+        <link rel="stylesheet" href="../../../css/general.css">
+        <link rel="stylesheet" href="../../../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../../highlight.css">
+        <link rel="stylesheet" href="../../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../../../style.css">
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../../";
+            var default_theme = "navy";
+            <!-- window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "navy"; -->
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('navy')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../../../welcome.html">Welcome to ROS2 MOOC !</a></li><li class="chapter-item affix "><li class="spacer"></li><li class="chapter-item "><a href="../../../GSWR2.html">Getting Started With ROS2</a></li><li class="chapter-item expanded "><a href="../../../Task_0/task_0.html">Remove This</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../Task_0/task_0.html">Task 0</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_0/installation/installation_guide.html">(1) Software Install</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_0/installation/humble_installation.html">- ROS 2 Humble Installation</a></li></ol></li><li class="chapter-item expanded "><a href="../../../Task_0/learning_resources/learning_resources.html">(2) Learning Resources</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../Task_0/learning_resources/linux/linux_resources.html">I. Linux Resources</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_0/learning_resources/linux/linux_file_system_directories.html">Linux File System Directories</a></li><li class="chapter-item "><a href="../../../Task_0/learning_resources/linux/linux_file_permissions.html">Linux File Permissions</a></li><li class="chapter-item expanded "><a href="../../../Task_0/learning_resources/linux/linux_file_commands.html" class="active">Linux File Commands</a></li><li class="chapter-item "><a href="../../../Task_0/learning_resources/linux/shell_scripting.html">Shell Scripting</a></li></ol></li><li class="chapter-item "><a href="../../../Task_0/learning_resources/ros_basics/ros_workspace.html">II. ROS 2 Workspace</a></li><li class="chapter-item "><a href="../../../Task_0/learning_resources/ros_basics/ros_package.html">III. ROS 2 Package</a></li><li class="chapter-item "><a href="../../../Task_0/learning_resources/ros_basics/ros_nodes.html">IV. ROS 2 Nodes</a></li><li class="chapter-item "><a href="../../../Task_0/learning_resources/ros_basics/ros_launch.html">V. ROS 2 Launch</a></li><li class="chapter-item "><a href="../../../Task_0/learning_resources/ros_basics/ros_topic.html">VI. ROS 2 Topic</a></li><li class="chapter-item "><a href="../../../Task_0/learning_resources/ros_basics/ros_service.html">VII. ROS 2 Service</a></li><li class="chapter-item "><a href="../../../Task_0/learning_resources/ros_basics/ros_action.html">VIII. ROS 2 Action</a></li><li class="chapter-item "><a href="../../../Task_0/learning_resources/robotics_simulation_overview.html">IX. Robotics Simulation Overview</a></li><li class="chapter-item "><a href="../../../Task_0/learning_resources/python_quick_tutorials.html">X. Python Quick Tutorials</a></li></ol></li><li class="chapter-item "><a href="../../../Task_0/warehouse_setup_task/warehouse_setup_task.html">(3) Warehouse Setup</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_0/warehouse_setup_task/task_instruction.html">- Task 0 - Instructions</a></li><li class="chapter-item "><a href="../../../Task_0/warehouse_setup_task/task_submission.html">- Task 0 - Submission</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><li class="spacer"></li><li class="chapter-item "><div>Bonus Blogs!</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../bonus_blogs/git_github.html">Git and GitHub</a></li><li class="chapter-item "><a href="../../../bonus_blogs/github_challenge.html">Github Challenge</a></li><li class="chapter-item "><a href="../../../bonus_blogs/coding_std.html">Coding Standards</a></li></ol></li><li class="chapter-item "><li class="spacer"></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <!-- <html>
+ 	<head>
+ 	<style>
+ 		
+ 	@media only screen and (max-width: 600px) {
+ 	  .eyrc_ckt{
+ 			display:none;
+ 		}
+ 	}
+ 
+ 	</style>
+ 	</head>
+ 	<body>
+ 		<div>
+ 		<center></center>
+ 			<div style="display:flex; justify-content:space-between;padding:10px;padding-top:0">
+ 				<div >
+ 					<img src="https://www.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" height="40px" style="padding:10px 15px;" />
+ 				</div>
+ 				<div>
+ 					<img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/maze_bot/assets/eyrc-header.svg" height="80px"  class="eyrc_ckt">
+ 				</div>
+ 				<div style="font-weight:900;font-size:20px;text-align:center;padding:10px 15px">
+ 					e-Yantra<br>
+ 					Robotics Competition
+ 				</div>
+ 			</div>
+ 			
+ 		</div>
+ 	</body>
+ </html>
+ 
+ 
+ -->
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar autohide sticky bordered">
+                    <div style="width:100%">
+                        <html>
+                        	<head>
+                        	<style>
+                        		
+                        	@media only screen and (max-width: 600px) {
+                        	  .eyrc_ckt{
+                        			display:none;
+                        		}
+                        	}
+                        
+                        	</style>
+                        	</head>
+                        	<body>
+                        		<div>
+                        		<center></center>
+                        			<div style="display:flex; justify-content:space-between;padding:10px;padding-top:0">
+                        				<div >
+                        					<img src="https://www.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" height="40px" style="padding:10px 15px;" />
+                        				</div>
+                        				<div>
+                        					<img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/maze_bot/assets/eyrc-header.svg" height="80px"  class="eyrc_ckt">
+                        				</div>
+                        				<div style="font-weight:900;font-size:20px;text-align:center;padding:10px 15px">
+                        					e-Yantra<br>
+                        					Robotics Competition
+                        				</div>
+                        			</div>
+                        			
+                        		</div>
+                        	</body>
+                        </html>
+                        
+                        
+                    </div>
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="space">Space</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">e-Yantra Robotics Competition - ROS2 MOOC</h1>
+
+                    <div class="right-buttons">
+                        <div id="navigation-buttons" type="button" onclick=" window.open('https://portal.e-yantra.org/profile_home', '_blank')">Home</div>
+                        <div id="navigation-buttons" type="button" onclick=" window.open('https://discuss.e-yantra.org/', '_blank')">Forum</div>
+                        <div id="navigation-buttons" type="button" onclick=" window.open('https://portal.e-yantra.org/logout', '_blank')">Logout</div>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!-- <center><img src="http://mooc.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" style="scale:75%;" /></center> -->
+<style>
+.back{
+	position: fixed;
+	width: 250px;
+	height: 250px;
+	top: 50%;
+	left: 50%;
+    margin-top: auto; 
+    margin-left: auto; 
+	opacity: 0.15;
+    z-index: -1;
+	}
+</style>
+<!-- <img src="http://mooc.e-yantra.org/img/EyantraLogoMini.png" class="back"> -->
+<center>
+    <h1 id="linux-file-commands"><a class="header" href="#linux-file-commands">Linux File Commands</a></h1>
+</center>
+<hr />
+</br>
+<h2 id="the-linux-terminal"><a class="header" href="#the-linux-terminal">The Linux Terminal</a></h2>
+<ul>
+<li>
+<p>In UNIX, terminal is a text interface to interact with the OS. There are list of commands which user can use to interact with the OS.</p>
+</li>
+<li>
+<p>Terminal is also called shell or console.</p>
+</li>
+<li>
+<p>Command Prompt and Powershell are two such kind of interface provided by Windows OS.</p>
+</li>
+<li>
+<p>In Ubuntu and most of the UNIX based OS a particular type of shell called <strong>Bash</strong> which is one kind of UNIX shell, is launched when you open any Terminal program. <strong>Zsh</strong> is another such popular shell for UNIX.</p>
+</li>
+<li>
+<p>These UNIX shell like Bash and Zsh are command processors which takes commands from user, interprets it and executes the commands with the help of the underlying OS.</p>
+</li>
+<li>
+<p>UNIX shells can also read commands from a file. Such kind of files are called <strong>Shell Scripts</strong>. In the next section we will explore this.</p>
+</li>
+<li>
+<p>One such shell script is <strong>.bashrc</strong> which resides in <code>/home/</code> directory. This shell script runs everytime you open an instance of Bash shell.</p>
+</li>
+<li>
+<p>In <strong>Ubuntu</strong> you can press <code>Ctrl + Alt + T</code> to open up an instance of the terminal.</p>
+</li>
+</ul>
+<h2 id="common-linux-commands"><a class="header" href="#common-linux-commands">Common Linux Commands</a></h2>
+<h3 id="sudo"><a class="header" href="#sudo">sudo</a></h3>
+<ul>
+<li>
+<p>In UNIX a <strong>superuser</strong> or <strong>root</strong> is a user which has unrestricted access to all the commands, files, folders and resources of the system.</p>
+</li>
+<li>
+<p>If you want to run any command as a superuser you need to prefix that command with <code>sudo</code>.</p>
+</li>
+<li>
+<p>eg: <code>sudo chmod +x hello.sh</code></p>
+</li>
+</ul>
+<h3 id="ls"><a class="header" href="#ls">ls</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Command</th><th>Function</th></tr></thead><tbody>
+<tr><td><code>ls</code></td><td>List the files and folders in the current directory</td></tr>
+<tr><td><code>ls -l</code></td><td><code>-l</code> flag is used with <code>ls</code> to list files and folders in the current directory with their permissions.</td></tr>
+<tr><td><code>ls -la</code></td><td><code>-la</code> flag is used to list all the files and folders including hidden ones with their permissions.</td></tr>
+</tbody></table>
+</div>
+<h3 id="mkdir"><a class="header" href="#mkdir">mkdir</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Usage</th><th>Result</th></tr></thead><tbody>
+<tr><td><code>mkdir folder1 folder2</code></td><td>This command will create two folders, folder1 and folder2 in current directory.</td></tr>
+</tbody></table>
+</div>
+<h3 id="cd"><a class="header" href="#cd">cd</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Usage</th><th>Result</th></tr></thead><tbody>
+<tr><td><code>cd ~</code></td><td>This will take to to <code>/home/</code> directory. In UNIX, tilde <code>~</code>  is used to represent home directory.</td></tr>
+<tr><td><code>cd ~/colcon_ws</code></td><td>This will take you inside a folder named colcon_ws in home directory</td></tr>
+</tbody></table>
+</div>
+<h3 id="echo"><a class="header" href="#echo">echo</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Usage</th><th>Result</th></tr></thead><tbody>
+<tr><td><code>echo "hello"</code></td><td>This will print the string <code>hello</code> in the terminal.</td></tr>
+<tr><td><code>echo "hello" &gt;&gt; file.txt </code></td><td>This will append the string <code>hello</code> at the end of <code>file.txt</code>. This won't overwrite anything.</td></tr>
+<tr><td><code>echo "hello" &gt; file.txt </code></td><td>This will append the string <code>hello</code> at the beginning of <code>file.txt</code>. This will overwrite.</td></tr>
+</tbody></table>
+</div>
+<h3 id="find"><a class="header" href="#find">find</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Command</th><th>Function</th></tr></thead><tbody>
+<tr><td><code>find . -type d -name "dir_name_start*"</code></td><td>List the files and folders in the current directory starting with "dir_name_start".</td></tr>
+<tr><td><code>find . -type f -name "file_name.*"</code></td><td>Search for files starting with "file_name" with unknown extension.</td></tr>
+</tbody></table>
+</div>
+<h3 id="grep"><a class="header" href="#grep">grep</a></h3>
+<ul>
+<li>
+<p>Search for <em>"text"</em> string inside any type of file.</p>
+<pre><code class="language-sh">grep -rnw "text"
+</code></pre>
+</li>
+<li>
+<p>Highlight &amp; Show only the pre-defined text in the output of a command</p>
+<pre><code class="language-sh">colcon build | grep "pkg_my_ros"
+</code></pre>
+</li>
+</ul>
+<h3 id="which"><a class="header" href="#which">which</a></h3>
+<ul>
+<li>
+<p>This command is used to find the location of an executable available to shell.</p>
+<pre><code class="language-sh">which python
+
+# Output
+/usr/bin/python
+</code></pre>
+</li>
+</ul>
+<h3 id="pwd"><a class="header" href="#pwd">pwd</a></h3>
+<ul>
+<li>
+<p>This will print out the path of current directory you are in.</p>
+<pre><code class="language-sh">pwd
+</code></pre>
+</li>
+</ul>
+<h3 id="cat"><a class="header" href="#cat">cat</a></h3>
+<ul>
+<li>
+<p>This will print the content of <code>file.txt</code> with line numbers, in the terminal.</p>
+<pre><code class="language-sh">cat -n file.txt
+</code></pre>
+</li>
+</ul>
+<h3 id="man"><a class="header" href="#man">man</a></h3>
+<ul>
+<li>
+<p>This is very useful command in UNIX. If you are not sure how to use any command just call <code>man</code>.</p>
+</li>
+<li>
+<p><code>man</code> stands for manual.</p>
+<pre><code class="language-sh">man which
+
+man cat
+
+man find
+
+man grep
+
+man man
+</code></pre>
+</li>
+</ul>
+</br>
+<hr />
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../../Task_0/learning_resources/linux/linux_file_permissions.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../../../Task_0/learning_resources/linux/shell_scripting.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../../Task_0/learning_resources/linux/linux_file_permissions.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../../../Task_0/learning_resources/linux/shell_scripting.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../../../sidebar.js"></script>
+
+
+    </body>
+</html>

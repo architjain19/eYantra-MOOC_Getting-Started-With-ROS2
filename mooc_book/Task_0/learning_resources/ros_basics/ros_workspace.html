@@ -1,0 +1,416 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js navy">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>II. ROS 2 Workspace - e-Yantra Robotics Competition - ROS2 MOOC</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- 
+        <link rel="icon" href="../../../favicon.svg">
+         -->
+        <link rel="shortcut icon" href="../../../favicon.png">
+        <link rel="stylesheet" href="../../../css/variables.css">
+        <link rel="stylesheet" href="../../../css/general.css">
+        <link rel="stylesheet" href="../../../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../../highlight.css">
+        <link rel="stylesheet" href="../../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../../../style.css">
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../../";
+            var default_theme = "navy";
+            <!-- window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "navy"; -->
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('navy')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../../../welcome.html">Welcome to ROS2 MOOC !</a></li><li class="chapter-item affix "><li class="spacer"></li><li class="chapter-item "><a href="../../../GSWR2.html">Getting Started With ROS2</a></li><li class="chapter-item expanded "><a href="../../../Task_0/task_0.html">Remove This</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../Task_0/task_0.html">Task 0</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_0/installation/installation_guide.html">(1) Software Install</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_0/installation/humble_installation.html">- ROS 2 Humble Installation</a></li></ol></li><li class="chapter-item expanded "><a href="../../../Task_0/learning_resources/learning_resources.html">(2) Learning Resources</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_0/learning_resources/linux/linux_resources.html">I. Linux Resources</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_0/learning_resources/linux/linux_file_system_directories.html">Linux File System Directories</a></li><li class="chapter-item "><a href="../../../Task_0/learning_resources/linux/linux_file_permissions.html">Linux File Permissions</a></li><li class="chapter-item "><a href="../../../Task_0/learning_resources/linux/linux_file_commands.html">Linux File Commands</a></li><li class="chapter-item "><a href="../../../Task_0/learning_resources/linux/shell_scripting.html">Shell Scripting</a></li></ol></li><li class="chapter-item expanded "><a href="../../../Task_0/learning_resources/ros_basics/ros_workspace.html" class="active">II. ROS 2 Workspace</a></li><li class="chapter-item "><a href="../../../Task_0/learning_resources/ros_basics/ros_package.html">III. ROS 2 Package</a></li><li class="chapter-item "><a href="../../../Task_0/learning_resources/ros_basics/ros_nodes.html">IV. ROS 2 Nodes</a></li><li class="chapter-item "><a href="../../../Task_0/learning_resources/ros_basics/ros_launch.html">V. ROS 2 Launch</a></li><li class="chapter-item "><a href="../../../Task_0/learning_resources/ros_basics/ros_topic.html">VI. ROS 2 Topic</a></li><li class="chapter-item "><a href="../../../Task_0/learning_resources/ros_basics/ros_service.html">VII. ROS 2 Service</a></li><li class="chapter-item "><a href="../../../Task_0/learning_resources/ros_basics/ros_action.html">VIII. ROS 2 Action</a></li><li class="chapter-item "><a href="../../../Task_0/learning_resources/robotics_simulation_overview.html">IX. Robotics Simulation Overview</a></li><li class="chapter-item "><a href="../../../Task_0/learning_resources/python_quick_tutorials.html">X. Python Quick Tutorials</a></li></ol></li><li class="chapter-item "><a href="../../../Task_0/warehouse_setup_task/warehouse_setup_task.html">(3) Warehouse Setup</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_0/warehouse_setup_task/task_instruction.html">- Task 0 - Instructions</a></li><li class="chapter-item "><a href="../../../Task_0/warehouse_setup_task/task_submission.html">- Task 0 - Submission</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><li class="spacer"></li><li class="chapter-item "><div>Bonus Blogs!</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../bonus_blogs/git_github.html">Git and GitHub</a></li><li class="chapter-item "><a href="../../../bonus_blogs/github_challenge.html">Github Challenge</a></li><li class="chapter-item "><a href="../../../bonus_blogs/coding_std.html">Coding Standards</a></li></ol></li><li class="chapter-item "><li class="spacer"></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <!-- <html>
+ 	<head>
+ 	<style>
+ 		
+ 	@media only screen and (max-width: 600px) {
+ 	  .eyrc_ckt{
+ 			display:none;
+ 		}
+ 	}
+ 
+ 	</style>
+ 	</head>
+ 	<body>
+ 		<div>
+ 		<center></center>
+ 			<div style="display:flex; justify-content:space-between;padding:10px;padding-top:0">
+ 				<div >
+ 					<img src="https://www.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" height="40px" style="padding:10px 15px;" />
+ 				</div>
+ 				<div>
+ 					<img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/maze_bot/assets/eyrc-header.svg" height="80px"  class="eyrc_ckt">
+ 				</div>
+ 				<div style="font-weight:900;font-size:20px;text-align:center;padding:10px 15px">
+ 					e-Yantra<br>
+ 					Robotics Competition
+ 				</div>
+ 			</div>
+ 			
+ 		</div>
+ 	</body>
+ </html>
+ 
+ 
+ -->
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar autohide sticky bordered">
+                    <div style="width:100%">
+                        <html>
+                        	<head>
+                        	<style>
+                        		
+                        	@media only screen and (max-width: 600px) {
+                        	  .eyrc_ckt{
+                        			display:none;
+                        		}
+                        	}
+                        
+                        	</style>
+                        	</head>
+                        	<body>
+                        		<div>
+                        		<center></center>
+                        			<div style="display:flex; justify-content:space-between;padding:10px;padding-top:0">
+                        				<div >
+                        					<img src="https://www.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" height="40px" style="padding:10px 15px;" />
+                        				</div>
+                        				<div>
+                        					<img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/maze_bot/assets/eyrc-header.svg" height="80px"  class="eyrc_ckt">
+                        				</div>
+                        				<div style="font-weight:900;font-size:20px;text-align:center;padding:10px 15px">
+                        					e-Yantra<br>
+                        					Robotics Competition
+                        				</div>
+                        			</div>
+                        			
+                        		</div>
+                        	</body>
+                        </html>
+                        
+                        
+                    </div>
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="space">Space</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">e-Yantra Robotics Competition - ROS2 MOOC</h1>
+
+                    <div class="right-buttons">
+                        <div id="navigation-buttons" type="button" onclick=" window.open('https://portal.e-yantra.org/profile_home', '_blank')">Home</div>
+                        <div id="navigation-buttons" type="button" onclick=" window.open('https://discuss.e-yantra.org/', '_blank')">Forum</div>
+                        <div id="navigation-buttons" type="button" onclick=" window.open('https://portal.e-yantra.org/logout', '_blank')">Logout</div>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!-- <center><img src="http://mooc.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" style="scale:75%;" /></center> -->
+<style>
+.back{
+	position: fixed;
+	width: 250px;
+	height: 250px;
+	top: 50%;
+	left: 50%;
+    margin-top: auto; 
+    margin-left: auto; 
+	opacity: 0.15;
+    z-index: -1;
+	}
+</style>
+<!-- <img src="http://mooc.e-yantra.org/img/EyantraLogoMini.png" class="back"> -->
+<center>
+    <h1 id="ros-2-workspace"><a class="header" href="#ros-2-workspace">ROS 2 Workspace</a></h1>
+</center>
+<hr />
+<h2 id="prerequisites"><a class="header" href="#prerequisites">Prerequisites:</a></h2>
+<ul>
+<li>
+<p><em><strong>Configure Environment:</strong></em></p>
+<p>The ROS 2 development environment needs to be correctly configured before use. This can be done in two ways: either sourcing the setup files in every new shell you open, or adding the source command to your startup script.
+You can refer the tutorial to <a href="https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.html">configure ros 2 environment.</a></p>
+</li>
+<li>
+<p><em><strong>Install colcon:</strong></em></p>
+<p><code>colcon</code> is an iteration on the ROS build tools <em>catkin_make, catkin_make_isolated, catkin_tools</em> and <em>ament_tools</em>. For more information on the design of colcon see <a href="https://design.ros2.org/articles/build_tool.html">this document</a>.</p>
+<pre><code class="language-sh">sudo apt install python3-colcon-common-extensions
+</code></pre>
+</li>
+</ul>
+<h2 id="basics"><a class="header" href="#basics">Basics:</a></h2>
+<p>A workspace is a directory containing ROS 2 packages <em>(ROS 2 is version name and not two packages)</em>. Before using ROS 2, it’s necessary to source your ROS 2 installation workspace in the terminal you plan to work in. This makes ROS 2’s packages available for you to use in that terminal.</p>
+<p>A ROS workspace is a directory with a particular structure. Commonly there is a <code>src</code> subdirectory. Inside that subdirectory is where the source code of ROS packages will be located. Typically the directory starts otherwise empty.</p>
+<p>colcon does out of source builds. By default it will create the following directories as peers of the <code>src</code> directory:</p>
+<ul>
+<li>
+<p>The <code>build</code> directory will be where intermediate files are stored. For each package a subfolder will be created in which e.g. CMake is being invoked.</p>
+</li>
+<li>
+<p>The <code>install</code> directory is where each package will be installed to. By default each package will be installed into a separate subdirectory.</p>
+</li>
+<li>
+<p>The <code>log</code> directory contains various logging information about each colcon invocation.</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> Compared to <em>catkin</em> there is no <code>devel</code> directory.</p>
+</blockquote>
+<h3 id="create-a-workspace"><a class="header" href="#create-a-workspace">Create a workspace</a></h3>
+<p>First, create a directory (<code>ros2_ws</code>) to contain our workspace:</p>
+<pre><code class="language-sh">mkdir -p ~/ros2_ws/src
+cd ~/ros2_ws
+</code></pre>
+<p>At this point the workspace contains a single empty directory <code>src</code>:</p>
+<pre><code class="language-sh">.
+└── src
+
+1 directory, 0 files
+</code></pre>
+</br>
+<blockquote>
+<p><em><strong>NOTE: Till here is what you need for TASK 0 to get started. Further if you want to explore more on ROS workspace, happy learning...</strong></em></p>
+</blockquote>
+<hr />
+<h3 id="add-some-sources"><a class="header" href="#add-some-sources">Add some sources</a></h3>
+<p>Let’s clone the <a href="https://github.com/ros2/examples">examples</a> repository into the <code>src</code> directory of the workspace:</p>
+<pre><code class="language-sh">git clone https://github.com/ros2/examples src/examples -b humble
+</code></pre>
+<p>Now the workspace should have the source code to the ROS 2 examples:</p>
+<pre><code class="language-sh">.
+└── src
+    └── examples
+        ├── CONTRIBUTING.md
+        ├── LICENSE
+        ├── rclcpp
+        ├── rclpy
+        └── README.md
+
+4 directories, 3 files
+</code></pre>
+<h3 id="source-an-underlay"><a class="header" href="#source-an-underlay">Source an underlay</a></h3>
+<p>It is important that we have sourced the environment for an existing ROS 2 installation that will provide our workspace with the necessary build dependencies for the example packages. This is achieved by sourcing the setup script provided by a binary installation or a source installation, ie. another colcon workspace (see <a href="https://docs.ros.org/en/humble/Installation.html">Installation</a>). We call this environment an <strong>underlay</strong>.</p>
+<h3 id="build-the-workspace"><a class="header" href="#build-the-workspace">Build the workspace</a></h3>
+<p>In the root of the workspace, run <code>colcon build</code>. Since build types such as <code>ament_cmake</code> do not support the concept of the <code>devel</code> space and require the package to be installed, colcon supports the option <code>--symlink-install</code>. This allows the installed files to be changed by changing the files in the <code>source</code> space (e.g. Python files or other non-compiled resources) for faster iteration.</p>
+<pre><code class="language-sh">colcon build --symlink-install
+</code></pre>
+<p>After the build is finished, we should see the <code>build</code>, <code>install</code>, and <code>log</code> directories:</p>
+<pre><code class="language-sh">.
+├── build
+├── install
+├── log
+└── src
+
+4 directories, 0 files
+</code></pre>
+<h3 id="run-tests-optional"><a class="header" href="#run-tests-optional">Run tests (Optional)</a></h3>
+<p>To run tests for the packages we just built, run the following:</p>
+<pre><code class="language-sh">colcon test
+</code></pre>
+<blockquote>
+<p><em><strong>NOTE: This may fail sometimes due to non-updated packages. You may ignore this command and no need to run <code>colcon test</code> if your <code>colcon build</code> has ran successfully.</strong></em></p>
+</blockquote>
+<h3 id="source-the-environment"><a class="header" href="#source-the-environment">Source the environment</a></h3>
+<p>When colcon has completed building successfully, the output will be in the <code>install</code> directory. Before you can use any of the installed executables or libraries, you will need to add them to your path and library paths. colcon will have generated bash/bat files in the <code>install</code> directory to help set up the environment. These files will add all of the required elements to your path and library paths as well as provide any bash or shell commands exported by packages.</p>
+<pre><code class="language-sh">source install/setup.bash
+</code></pre>
+<h2 id="create-your-own-package"><a class="header" href="#create-your-own-package">Create your own package:</a></h2>
+<p>colcon uses the <code>package.xml</code> specification defined in <a href="https://www.ros.org/reps/rep-0149.html">REP 149</a> (<a href="https://www.ros.org/reps/rep-0140.html">format</a> 2 is also supported).</p>
+<p>colcon supports multiple build types. The recommended build types are <code>ament_cmake</code> and <code>ament_python</code>. Also supported are pure <code>cmake</code> packages.</p>
+<p>An example of an <code>ament_python</code> build is the <a href="https://github.com/ament/ament_index/tree/humble/ament_index_python">ament_index_python package</a> , where the <em>setup.py</em> is the primary entry point for building.</p>
+<p>A package such as <a href="https://github.com/ros2/demos/tree/humble/demo_nodes_cpp">demo_nodes_cpp</a> uses the <code>ament_cmake</code> build type, and uses CMake as the build tool.</p>
+<p>For convenience, you can use the tool <code>ros2 pkg create</code> to create a new package based on a template.</p>
+<h2 id="setup-colcon_cd"><a class="header" href="#setup-colcon_cd">Setup <code>colcon_cd</code>:</a></h2>
+<p>The command <code>colcon_cd</code> allows you to quickly change the current working directory of your shell to the directory of a package. As an example <code>colcon_cd some_ros_package</code> would quickly bring you to the directory <code>~/ros2_ws/src/some_ros_package</code>.</p>
+<pre><code class="language-sh">echo "source /usr/share/colcon_cd/function/colcon_cd.sh" &gt;&gt; ~/.bashrc
+echo "export _colcon_cd_root=/opt/ros/humble/" &gt;&gt; ~/.bashrc
+</code></pre>
+<p>Depending on the way you installed <code>colcon_cd</code> and where your workspace is, the instructions above may vary, please refer to the <a href="https://colcon.readthedocs.io/en/released/user/installation.html#quick-directory-changes">documentation</a> for more details. To undo this in Linux and macOS, locate your system’s shell startup script and remove the appended source and export commands.</p>
+<h2 id="tips"><a class="header" href="#tips">Tips:</a></h2>
+<ul>
+<li>
+<p>If you do not want to build a specific package place an empty file named <code>COLCON_IGNORE</code> in the directory and it will not be indexed.</p>
+</li>
+<li>
+<p>If you want to avoid configuring and building tests in CMake packages you can pass: <code>--cmake-args -DBUILD_TESTING=0</code>.</p>
+</li>
+<li>
+<p>If you want to run a single particular test from a package:</p>
+<pre><code class="language-sh">colcon test --packages-select YOUR_PKG_NAME --ctest-args -R YOUR_TEST_IN_PKG
+</code></pre>
+</li>
+</ul>
+<h2 id="references"><a class="header" href="#references">References:</a></h2>
+<ul>
+<li>
+<p><a href="https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.html">Configuring ROS 2 Environment</a></p>
+</li>
+<li>
+<p><a href="https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.html">Creating a ROS 2 Workspace</a></p>
+</li>
+</ul>
+</br>
+<hr />
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../../Task_0/learning_resources/linux/shell_scripting.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../../../Task_0/learning_resources/ros_basics/ros_package.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../../Task_0/learning_resources/linux/shell_scripting.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../../../Task_0/learning_resources/ros_basics/ros_package.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../../../sidebar.js"></script>
+
+
+    </body>
+</html>

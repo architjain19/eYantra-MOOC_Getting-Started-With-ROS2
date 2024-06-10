@@ -3,7 +3,7 @@ authors = ["e-Yantra"]
 language = "en"
 multilingual = false
 src = "src"
-title = "eYRC: Getting Started with ROS2"
+title = "e-Yantra Robotics Competition - ROS2 MOOC"
 
 [build]
 build-dir = "mooc_book"
