@@ -1,25 +1,8 @@
 # e-Yantra Robotics Competition MOOC - Getting Started With ROS2
 
-<!-- <center><img src="http://mooc.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" style="scale:75%;" /></center> -->
-
-<style>
-.back{
-	position: fixed;
-	width: 250px;
-	height: 250px;
-	top: 50%;
-	left: 50%;
-    margin-top: auto; 
-    margin-left: auto; 
-	opacity: 0.15;
-    z-index: -1;
-	}
-</style>
-<!-- <img src="http://mooc.e-yantra.org/img/EyantraLogoMini.png" class="back"> -->
-
 <center>
-<img height="250px" src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,c_fill,w_2000,h_936/https://ubuntu.com/wp-content/uploads/a2df/ubuntu-robotics-ros2.png" />
-<img style="margin-left: 5px;" src="https://docs.ros.org/en/humble/_static/humble-small.png"  height="250px">
+<img height="150px" src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,c_fill,w_2000,h_936/https://ubuntu.com/wp-content/uploads/a2df/ubuntu-robotics-ros2.png" />
+<img style="margin-left: 5px;" src="https://docs.ros.org/en/humble/_static/humble-small.png"  height="150px">
 </center>
 
 </br>
