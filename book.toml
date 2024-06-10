@@ -3,10 +3,10 @@ authors = ["e-Yantra"]
 language = "en"
 multilingual = false
 src = "src"
-title = "eYRC 2023-24: Cosmo Logistic"
+title = "eYRC: Getting Started with ROS2"
 
 [build]
-build-dir = "theme_book"
+build-dir = "mooc_book"
 create-missing = false
 
 [output.html.fold]
@@ -23,7 +23,7 @@ enable = false
 #line-numbers = true
 
 [output.html]
-theme = "new_mdbook_theme"
+theme = "mooc_book_theme"
 default-theme = "navy"
 no-section-label = true
 mathjax-support = true
