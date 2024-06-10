@@ -1,0 +1,424 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js navy">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Welcome to ROS2 MOOC ! - e-Yantra Robotics Competition - ROS2 MOOC</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- 
+        <link rel="icon" href="favicon.svg">
+         -->
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="style.css">
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "navy";
+            <!-- window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "navy"; -->
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('navy')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="welcome.html" class="active">Welcome to ROS2 MOOC !</a></li><li class="chapter-item affix "><li class="spacer"></li><li class="chapter-item "><a href="GSWR2.html">Getting Started With ROS2</a></li><li class="chapter-item "><a href="Task_0/task_0.html">Remove This</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="Task_0/task_0.html">Task 0</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="Task_0/installation/installation_guide.html">(1) Software Install</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="Task_0/installation/humble_installation.html">- ROS 2 Humble Installation</a></li></ol></li><li class="chapter-item "><a href="Task_0/learning_resources/learning_resources.html">(2) Learning Resources</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="Task_0/learning_resources/linux/linux_resources.html">I. Linux Resources</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="Task_0/learning_resources/linux/linux_file_system_directories.html">Linux File System Directories</a></li><li class="chapter-item "><a href="Task_0/learning_resources/linux/linux_file_permissions.html">Linux File Permissions</a></li><li class="chapter-item "><a href="Task_0/learning_resources/linux/linux_file_commands.html">Linux File Commands</a></li><li class="chapter-item "><a href="Task_0/learning_resources/linux/shell_scripting.html">Shell Scripting</a></li></ol></li><li class="chapter-item "><a href="Task_0/learning_resources/ros_basics/ros_workspace.html">II. ROS 2 Workspace</a></li><li class="chapter-item "><a href="Task_0/learning_resources/ros_basics/ros_package.html">III. ROS 2 Package</a></li><li class="chapter-item "><a href="Task_0/learning_resources/ros_basics/ros_nodes.html">IV. ROS 2 Nodes</a></li><li class="chapter-item "><a href="Task_0/learning_resources/ros_basics/ros_launch.html">V. ROS 2 Launch</a></li><li class="chapter-item "><a href="Task_0/learning_resources/ros_basics/ros_topic.html">VI. ROS 2 Topic</a></li><li class="chapter-item "><a href="Task_0/learning_resources/ros_basics/ros_service.html">VII. ROS 2 Service</a></li><li class="chapter-item "><a href="Task_0/learning_resources/ros_basics/ros_action.html">VIII. ROS 2 Action</a></li><li class="chapter-item "><a href="Task_0/learning_resources/robotics_simulation_overview.html">IX. Robotics Simulation Overview</a></li><li class="chapter-item "><a href="Task_0/learning_resources/python_quick_tutorials.html">X. Python Quick Tutorials</a></li></ol></li><li class="chapter-item "><a href="Task_0/warehouse_setup_task/warehouse_setup_task.html">(3) Warehouse Setup</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="Task_0/warehouse_setup_task/task_instruction.html">- Task 0 - Instructions</a></li><li class="chapter-item "><a href="Task_0/warehouse_setup_task/task_submission.html">- Task 0 - Submission</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><li class="spacer"></li><li class="chapter-item "><div>Bonus Blogs!</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="bonus_blogs/git_github.html">Git and GitHub</a></li><li class="chapter-item "><a href="bonus_blogs/github_challenge.html">Github Challenge</a></li><li class="chapter-item "><a href="bonus_blogs/coding_std.html">Coding Standards</a></li></ol></li><li class="chapter-item "><li class="spacer"></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <!-- <html>
+ 	<head>
+ 	<style>
+ 		
+ 	@media only screen and (max-width: 600px) {
+ 	  .eyrc_ckt{
+ 			display:none;
+ 		}
+ 	}
+ 
+ 	</style>
+ 	</head>
+ 	<body>
+ 		<div>
+ 		<center></center>
+ 			<div style="display:flex; justify-content:space-between;padding:10px;padding-top:0">
+ 				<div >
+ 					<img src="https://www.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" height="40px" style="padding:10px 15px;" />
+ 				</div>
+ 				<div>
+ 					<img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/maze_bot/assets/eyrc-header.svg" height="80px"  class="eyrc_ckt">
+ 				</div>
+ 				<div style="font-weight:900;font-size:20px;text-align:center;padding:10px 15px">
+ 					e-Yantra<br>
+ 					Robotics Competition
+ 				</div>
+ 			</div>
+ 			
+ 		</div>
+ 	</body>
+ </html>
+ 
+ 
+ -->
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar autohide sticky bordered">
+                    <div style="width:100%">
+                        <html>
+                        	<head>
+                        	<style>
+                        		
+                        	@media only screen and (max-width: 600px) {
+                        	  .eyrc_ckt{
+                        			display:none;
+                        		}
+                        	}
+                        
+                        	</style>
+                        	</head>
+                        	<body>
+                        		<div>
+                        		<center></center>
+                        			<div style="display:flex; justify-content:space-between;padding:10px;padding-top:0">
+                        				<div >
+                        					<img src="https://www.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" height="40px" style="padding:10px 15px;" />
+                        				</div>
+                        				<div>
+                        					<img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/maze_bot/assets/eyrc-header.svg" height="80px"  class="eyrc_ckt">
+                        				</div>
+                        				<div style="font-weight:900;font-size:20px;text-align:center;padding:10px 15px">
+                        					e-Yantra<br>
+                        					Robotics Competition
+                        				</div>
+                        			</div>
+                        			
+                        		</div>
+                        	</body>
+                        </html>
+                        
+                        
+                    </div>
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="space">Space</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">e-Yantra Robotics Competition - ROS2 MOOC</h1>
+
+                    <div class="right-buttons">
+                        <div id="navigation-buttons" type="button" onclick=" window.open('https://portal.e-yantra.org/profile_home', '_blank')">Home</div>
+                        <div id="navigation-buttons" type="button" onclick=" window.open('https://discuss.e-yantra.org/', '_blank')">Forum</div>
+                        <div id="navigation-buttons" type="button" onclick=" window.open('https://portal.e-yantra.org/logout', '_blank')">Logout</div>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!-- <center><img src="http://mooc.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" style="scale:75%;" /></center> -->
+<style>
+.back{
+	position: fixed;
+	width: 250px;
+	height: 250px;
+	top: 50%;
+	left: 50%;
+    margin-top: auto; 
+    margin-left: auto; 
+	opacity: 0.15;
+    z-index: -1;
+	}
+</style>
+<!-- <img src="http://mooc.e-yantra.org/img/EyantraLogoMini.png" class="back"> -->
+<center>
+    <h1 id="welcome-to-course--getting-started-with-ros2"><a class="header" href="#welcome-to-course--getting-started-with-ros2">Welcome to course -</br>Getting Started With ROS2</a></h1>
+</center>
+<hr />
+</br>
+<center>
+<img height="250px" src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,c_fill,w_2000,h_936/https://ubuntu.com/wp-content/uploads/a2df/ubuntu-robotics-ros2.png" />
+<img style="margin-left: 5px;" src="common_resources/humble.png"  height="250px">
+</center>
+<blockquote>
+<p><em>Welcome to the exciting world of ROS2! This comprehensive introductory course is designed for both newcomers to the Robot Operating System (ROS) and experienced ROS1 users looking to transition to the latest version. Whether you are just starting your journey with ROS or looking to upgrade your skills, this course will provide you with the foundational knowledge you need to succeed.</em></p>
+</blockquote>
+<h3 id="why-ros2"><a class="header" href="#why-ros2">Why ROS2?</a></h3>
+<p>ROS2 brings a host of new features and improvements that enhance performance, flexibility, and scalability. These advancements are poised to drive the future of robotics, making ROS2 a must-learn for anyone serious about robotics development.</p>
+<h3 id="what-youll-learn"><a class="header" href="#what-youll-learn">What You'll Learn</a></h3>
+<p>In this course, you will:</p>
+<ul>
+<li>
+<p><strong>Understand the Basics:</strong> Get a solid grasp of the core concepts and architecture of ROS2.</p>
+</li>
+<li>
+<p><strong>Hands-On Practice:</strong> Engage in practical exercises and debugging techniques that reinforce your learning and build your skills.</p>
+</li>
+<li>
+<p><strong>ROS1 v/s ROS2 and DDS:</strong> Learn the key differences between ROS1 and ROS2; Recognize the features of Data Distribution Service (DDS) used in ROS2</p>
+</li>
+<li>
+<p><strong>Future-Proof Skills:</strong> Equip yourself with the knowledge and skills that are set to become industry standards in the coming years.</p>
+</li>
+</ul>
+<h3 id="pre-requisites"><a class="header" href="#pre-requisites">Pre-requisites:</a></h3>
+<ul>
+<li>
+<p>Knowledge in <code>C++</code> and/or <code>Python</code> Programming languages</p>
+</li>
+<li>
+<p>Familiarity with <code>ROS1</code> (recommended, but not compulsory)</p>
+</li>
+<li>
+<p>Basic understanding of <code>Linux - Ubuntu</code> Operating System</p>
+</li>
+<li>
+<p>Motivated to learn, explore and get started with <code>ROS2</code></p>
+</li>
+</ul>
+<h3 id="course-structure"><a class="header" href="#course-structure">Course Structure</a></h3>
+<p>This MOOC is structured to take you from the basics to a competent level of ROS2 proficiency. We will start with fundamental concepts and gradually move to more advanced topics. While this course focuses on the essentials, more specialized subjects will be covered in dedicated courses. In the current "Getting Started With ROS2" we will focus on core basics of ROS2.</p>
+<blockquote>
+<ul>
+<li>
+<p><strong><u>Introduction and Installation Setup:</u></strong></p>
+<ul>
+<li>In this module, we will set up the system by installing required software components. You will learn how to install ROS2 Humble on Ubuntu 22.04 Linux systems and set up Gazebo and ROS2 environments.</li>
+</ul>
+</li>
+<li>
+<p><strong><u>ROS2 Design concepts:</u></strong></p>
+<ul>
+<li>This module will cover the basics history of ROS, the difference between ROS1 and ROS2, what is a Data Distribution Service, and ROS2 design concepts.</li>
+</ul>
+</li>
+<li>
+<p><strong><u>ROS2 Ecosystem and Filesystem:</u></strong></p>
+<ul>
+<li>ROS2 underlay and overlay workspace environment</li>
+<li>Create Colcon workspace</li>
+<li>Build and install file explanation</li>
+<li>Create custom ROS2 package (Python and CMake)</li>
+</ul>
+</li>
+<li>
+<p><strong><u>Getting started with RQT visualisation and CLI tools in ROS2:</u></strong></p>
+<ul>
+<li>ros2 topic/service/action list, info, pub</li>
+<li>ros2 run/launch nodes</li>
+<li>RQT graph visualisation</li>
+<li>ros2 msg list, info, interface, etc</li>
+</ul>
+</li>
+<li>
+<p><strong><u>Overview of Topics, Publishers, Subscribers and Services in ROS2:</u></strong></p>
+</li>
+<li>
+<p><strong><u>Overview of ROS2 nodes:</u></strong></p>
+<ul>
+<li>Understanding talker and listener Nodes</li>
+<li>How to write publisher-subscriber nodes in ROS2 (Python and C++)</li>
+</ul>
+</li>
+<li>
+<p><strong><u>Launch files and running ROS nodes:</u></strong></p>
+<ul>
+<li>Components in ROS2 launch file</li>
+<li>How to run ROS nodes using launch files</li>
+<li>CLI commands to launch files and run ROS nodes</li>
+</ul>
+</li>
+<li>
+<p><strong><u>Overview of Turtlesim:</u></strong></p>
+<ul>
+<li>CLI operation of turtlesim robot</li>
+<li>Create patterns using turtlesim by developing your custom ROS2 nodes</li>
+</ul>
+</li>
+<li>
+<p><strong><u>Choose your ROS2 Turtlesim milestone project:</u></strong></p>
+<ul>
+<li>Choose and develop any of these projects using concepts learnt from this course
+<ul>
+<li>Draw Iron Man using Turtlesim</li>
+<li>Snake Game using Turtlesim</li>
+<li>Ping Pong using Turtlesim</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 id="system-requirements"><a class="header" href="#system-requirements">System Requirements:</a></h3>
+<ul>
+<li>
+<p><strong>Operating System:</strong> Ubuntu 22.04 LTS</p>
+</li>
+<li>
+<p><strong>Processor:</strong> eight cores, x86_64 (64-bit x86 Instruction Set)</p>
+</li>
+<li>
+<p><strong>HDD or SSD Storage space:</strong> 50GB or more</p>
+</li>
+<li>
+<p><strong>RAM:</strong> 8GB or more</p>
+</li>
+<li>
+<p><strong>Dedicated graphics card:</strong> preferable</p>
+</li>
+<li>
+<p><strong>Internet:</strong> Minimum speed of 5 Mbps &amp; latency &lt;= 50ms</p>
+</li>
+</ul>
+<h3 id="get-ready-to-explore-ros2"><a class="header" href="#get-ready-to-explore-ros2">Get Ready to Explore ROS2</a></h3>
+<blockquote>
+<p>ROS2 is more than just an upgrade—it's a powerful tool that opens up new possibilities in robotics. This course is your gateway to mastering ROS2 and staying ahead in the fast-evolving field of robotics.</p>
+<p><em><strong>Let's embark on this exciting journey together!</strong></em></p>
+</blockquote>
+<hr />
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+                            <a rel="next" href="GSWR2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+                    <a rel="next" href="GSWR2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="sidebar.js"></script>
+
+
+    </body>
+</html>
