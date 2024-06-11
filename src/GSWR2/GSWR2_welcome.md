@@ -69,7 +69,7 @@ This MOOC is structured to take you from the basics to a competent level of ROS2
 > - **[Introduction and Installation Setup:](introduction_installation/intro_install.md)**
 > 	- In this module, we will set up the system by installing required software components. You will learn how to install ROS2 Humble on Ubuntu 22.04 Linux systems while set up and configure ROS2 environments.
 > 
-> - **<u>ROS2 Design concepts:</u>**
+> - **[ROS2 Design concepts:](ros2_design_concepts/ros2_design_concepts.md)**
 > 	- This module will cover the basics history of ROS, the difference between ROS1 and ROS2, what is a Data Distribution Service, and ROS2 design concepts.
 > 
 > - **<u>ROS2 Ecosystem and Filesystem:</u>**
