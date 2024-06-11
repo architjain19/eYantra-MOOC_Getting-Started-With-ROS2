@@ -16,7 +16,7 @@
 <!-- <img src="http://mooc.e-yantra.org/img/EyantraLogoMini.png" class="back"> -->
 
 <center>
-    <h1>Welcome to course -</br>Getting Started With ROS2</h1>
+    <h1>Welcome to ROS2 MOOC !</h1>
 </center>
 
 ---
@@ -46,73 +46,6 @@ In this course, you will:
 - **ROS1 v/s ROS2 and DDS:** Learn the key differences between ROS1 and ROS2; Recognize the features of Data Distribution Service (DDS) used in ROS2
 
 - **Future-Proof Skills:** Equip yourself with the knowledge and skills that are set to become industry standards in the coming years.
-
-### Pre-requisites:
-
-- Knowledge in `C++` and/or `Python` Programming languages
-
-- Familiarity with `ROS1` (recommended, but not compulsory)
-
-- Basic understanding of `Linux - Ubuntu` Operating System
-
-- Motivated to learn, explore and get started with `ROS2`
-
-### Course Structure
-
-This MOOC is structured to take you from the basics to a competent level of ROS2 proficiency. We will start with fundamental concepts and gradually move to more advanced topics. While this course focuses on the essentials, more specialized subjects will be covered in dedicated courses. In the current "Getting Started With ROS2" we will focus on core basics of ROS2.
-
-> - **<u>Introduction and Installation Setup:</u>**
-> 	- In this module, we will set up the system by installing required software components. You will learn how to install ROS2 Humble on Ubuntu 22.04 Linux systems and set up Gazebo and ROS2 environments.
-> 
-> - **<u>ROS2 Design concepts:</u>**
-> 	- This module will cover the basics history of ROS, the difference between ROS1 and ROS2, what is a Data Distribution Service, and ROS2 design concepts.
-> 
-> - **<u>ROS2 Ecosystem and Filesystem:</u>**
-> 	- ROS2 underlay and overlay workspace environment
-> 	- Create Colcon workspace
-> 	- Build and install file explanation
-> 	- Create custom ROS2 package (Python and CMake) 
-> 
-> - **<u>Getting started with RQT visualisation and CLI tools in ROS2:</u>**
-> 	- ros2 topic/service/action list, info, pub
-> 	- ros2 run/launch nodes
-> 	- RQT graph visualisation
-> 	- ros2 msg list, info, interface, etc
-> 
-> - **<u>Overview of Topics, Publishers, Subscribers and Services in ROS2:</u>**
-> 
-> - **<u>Overview of ROS2 nodes:</u>**
-> 	- Understanding talker and listener Nodes
-> 	- How to write publisher-subscriber nodes in ROS2 (Python and C++)
-> 
-> - **<u>Launch files and running ROS nodes:</u>**
-> 	- Components in ROS2 launch file
-> 	- How to run ROS nodes using launch files
-> 	- CLI commands to launch files and run ROS nodes
-> 
-> - **<u>Overview of Turtlesim:</u>**
-> 	- CLI operation of turtlesim robot
-> 	- Create patterns using turtlesim by developing your custom ROS2 nodes
-> 
-> - **<u>Choose your ROS2 Turtlesim milestone project:</u>**
-> 	- Choose and develop any of these projects using concepts learnt from this course
-> 		- Draw Iron Man using Turtlesim
-> 		- Snake Game using Turtlesim
-> 		- Ping Pong using Turtlesim
-
-### System Requirements:
-
-- **Operating System:** Ubuntu 22.04 LTS
-
-- **Processor:** eight cores, x86_64 (64-bit x86 Instruction Set)
-
-- **HDD or SSD Storage space:** 50GB or more
-
-- **RAM:** 8GB or more
-
-- **Dedicated graphics card:** preferable
-
-- **Internet:** Minimum speed of 5 Mbps & latency <= 50ms
 
 
 ### Get Ready to Explore ROS2

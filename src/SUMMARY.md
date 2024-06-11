@@ -4,10 +4,11 @@
 
 ---
 
-- [Getting Started With ROS2](GSWR2.md)
+- [Getting Started With ROS2](GSWR2/GSWR2_welcome.md)
+  - [Introduction and Installation Setup](GSWR2/introduction_installation/intro_install.md)
 
 
-- [Remove This](Task_0/task_0.md)
+<!-- - [Remove This](Task_0/task_0.md)
   - [Task 0](Task_0/task_0.md)
     - [(1) Software Install](Task_0/installation/installation_guide.md)
       - [- ROS 2 Humble Installation](Task_0/installation/humble_installation.md)
@@ -29,7 +30,7 @@
 
     - [(3) Warehouse Setup](Task_0/warehouse_setup_task/warehouse_setup_task.md)
       - [- Task 0 - Instructions](Task_0/warehouse_setup_task/task_instruction.md)
-      - [- Task 0 - Submission](Task_0/warehouse_setup_task/task_submission.md)
+      - [- Task 0 - Submission](Task_0/warehouse_setup_task/task_submission.md) -->
 
 ---
 
