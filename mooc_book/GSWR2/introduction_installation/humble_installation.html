@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Welcome to ROS2 MOOC ! - e-Yantra Robotics Competition - ROS2 MOOC</title>
+        <title>ROS2 Humble Installation - e-Yantra Robotics Competition - ROS2 MOOC</title>
 
 
         <!-- Custom HTML head -->
@@ -14,24 +14,24 @@
         <meta name="theme-color" content="#ffffff" />
 
         <!-- 
-        <link rel="icon" href="favicon.svg">
+        <link rel="icon" href="../../favicon.svg">
          -->
-        <link rel="shortcut icon" href="favicon.png">
-        <link rel="stylesheet" href="css/variables.css">
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="fonts/fonts.css">
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="highlight.css">
-        <link rel="stylesheet" href="tomorrow-night.css">
-        <link rel="stylesheet" href="ayu-highlight.css">
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../../style.css">
 
         <!-- MathJax -->
         <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -39,7 +39,7 @@
     <body>
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
-            var path_to_root = "";
+            var path_to_root = "../../";
             var default_theme = "navy";
             <!-- window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "navy"; -->
         </script>
@@ -86,7 +86,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item affix "><a href="welcome.html" class="active">Welcome to ROS2 MOOC !</a></li><li class="chapter-item affix "><li class="spacer"></li><li class="chapter-item "><a href="GSWR2/GSWR2_welcome.html">Getting Started With ROS2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="GSWR2/introduction_installation/intro_install.html">Introduction and Installation Setup</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="GSWR2/introduction_installation/humble_installation.html">ROS2 Humble Installation</a></li></ol></li><li class="chapter-item "><a href="GSWR2/ros2_design_concepts/ros2_design_concepts.html">ROS2 Design concepts</a></li></ol></li><li class="chapter-item "><li class="spacer"></li><li class="chapter-item "><div>Bonus Blogs!</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="bonus_blogs/git_github.html">Git and GitHub</a></li><li class="chapter-item "><a href="bonus_blogs/github_challenge.html">Github Challenge</a></li><li class="chapter-item "><a href="bonus_blogs/coding_std.html">Coding Standards</a></li></ol></li><li class="chapter-item "><li class="spacer"></li></ol>
+                <ol class="chapter"><li class="chapter-item affix "><a href="../../welcome.html">Welcome to ROS2 MOOC !</a></li><li class="chapter-item affix "><li class="spacer"></li><li class="chapter-item expanded "><a href="../../GSWR2/GSWR2_welcome.html">Getting Started With ROS2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../GSWR2/introduction_installation/intro_install.html">Introduction and Installation Setup</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../GSWR2/introduction_installation/humble_installation.html" class="active">ROS2 Humble Installation</a></li></ol></li><li class="chapter-item "><a href="../../GSWR2/ros2_design_concepts/ros2_design_concepts.html">ROS2 Design concepts</a></li></ol></li><li class="chapter-item "><li class="spacer"></li><li class="chapter-item "><div>Bonus Blogs!</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../bonus_blogs/git_github.html">Git and GitHub</a></li><li class="chapter-item "><a href="../../bonus_blogs/github_challenge.html">Github Challenge</a></li><li class="chapter-item "><a href="../../bonus_blogs/coding_std.html">Coding Standards</a></li></ol></li><li class="chapter-item "><li class="spacer"></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -232,48 +232,133 @@
 </style>
 <!-- <img src="http://mooc.e-yantra.org/img/EyantraLogoMini.png" class="back"> -->
 <center>
-    <h1 id="welcome-to-ros2-mooc-"><a class="header" href="#welcome-to-ros2-mooc-">Welcome to ROS2 MOOC !</a></h1>
+    <h1 id="ros-2-humble-installation-guide"><a class="header" href="#ros-2-humble-installation-guide">ROS 2 Humble Installation Guide</a></h1>
 </center>
 <hr />
 </br>
-<center>
-<img height="250px" src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,c_fill,w_2000,h_936/https://ubuntu.com/wp-content/uploads/a2df/ubuntu-robotics-ros2.png" />
-<img style="margin-left: 5px;" height="250px" src="https://docs.ros.org/en/humble/_static/humble-small.png" />
-</center>
 <blockquote>
-<p><em>Welcome to the exciting world of ROS2! This comprehensive introductory course is designed for both newcomers to the Robot Operating System (ROS) and experienced ROS1 users looking to transition to the latest version. Whether you are just starting your journey with ROS or looking to upgrade your skills, this course will provide you with the foundational knowledge you need to succeed.</em></p>
-</blockquote>
-<h3 id="why-ros2"><a class="header" href="#why-ros2">Why ROS2?</a></h3>
-<p>ROS2 brings a host of new features and improvements that enhance performance, flexibility, and scalability. These advancements are poised to drive the future of robotics, making ROS2 a must-learn for anyone serious about robotics development.</p>
-<h3 id="what-youll-learn"><a class="header" href="#what-youll-learn">What You'll Learn</a></h3>
-<p>In this course, you will:</p>
 <ul>
 <li>
-<p><strong>Understand the Basics:</strong> Get a solid grasp of the core concepts and architecture of ROS2.</p>
+<p><em><strong>This Document assumes that the reader has installed Ubuntu 22.04. However, if you haven’t installed Ubuntu 22.04 yet make sure to install it before proceeding.</strong></em></p>
 </li>
 <li>
-<p><strong>Hands-On Practice:</strong> Engage in practical exercises and debugging techniques that reinforce your learning and build your skills.</p>
+<p><em><strong>Please practise and execute all the content related to this course in Ubuntu 22.04 only. Developers of this course have tested all the provided material/packages only on the mentioned Operating system.</strong></em></p>
 </li>
 <li>
-<p><strong>ROS1 v/s ROS2 and DDS:</strong> Learn the key differences between ROS1 and ROS2; Recognize the features of Data Distribution Service (DDS) used in ROS2</p>
-</li>
-<li>
-<p><strong>Future-Proof Skills:</strong> Equip yourself with the knowledge and skills that are set to become industry standards in the coming years.</p>
+<p><em><strong>e-Yantra won’t be able to help solve queries related to any other Operating System.</strong></em></p>
 </li>
 </ul>
-<h3 id="get-ready-to-explore-ros2"><a class="header" href="#get-ready-to-explore-ros2">Get Ready to Explore ROS2</a></h3>
-<blockquote>
-<p>ROS2 is more than just an upgrade—it's a powerful tool that opens up new possibilities in robotics. This course is your gateway to mastering ROS2 and staying ahead in the fast-evolving field of robotics.</p>
-<p><em><strong>Let's embark on this exciting journey together!</strong></em></p>
 </blockquote>
+<h2 id="installation-instructions"><a class="header" href="#installation-instructions">Installation Instructions</a></h2>
+<p><em>ROS (Robot Operating System) provides libraries and tools to help software developers create robot applications. It provides hardware abstraction, device drivers, libraries, visualisers, message-passing, package management, and more. ROS is licensed under an open source, BSD license.</em></p>
+<p><em><strong>(You can refer to the <a href="https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html">official installation guide</a> from ROS documentation.)</strong></em></p>
+<blockquote>
+<p>Here the <a href="https://docs.ros.org/en/rolling/Releases.html">distribution</a> compatible with Ubuntu 22.04 is the <a href="http://docs.ros.org/en/humble/">ROS Humble Hawksbill</a>. Follow the steps below to install it.</p>
+</blockquote>
+<h3 id="installation-steps"><a class="header" href="#installation-steps">&gt; Installation Steps</a></h3>
+<blockquote>
+<p><strong>1. Set locale:</strong> Make sure you have a locale which supports “UTF-8”. For this try the following commands</p>
+</blockquote>
+<pre><code>locale  # check for UTF-8
+
+sudo apt update &amp;&amp; sudo apt install locales
+sudo locale-gen en_US en_US.UTF-8
+sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+locale  # verify settings
+</code></pre>
+<blockquote>
+<p><strong>2. Setup Sources:</strong> You will need to add the ROS 2 apt repository to your system. <em>(More about <strong>curl</strong> <a href="https://curl.se/">here</a>)</em></p>
+</blockquote>
+<ul>
+<li>First ensure that the <a href="https://help.ubuntu.com/community/Repositories/Ubuntu">Ubuntu Universe repository</a> is enabled.
+<pre><code>sudo apt install software-properties-common
+sudo add-apt-repository universe
+</code></pre>
+</li>
+<li>Now add the ROS 2 GPG key with apt.
+<pre><code>sudo apt update &amp;&amp; sudo apt install curl -y
+sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+</code></pre>
+</li>
+<li>Then add the repository to your sources list.
+<pre><code>echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release &amp;&amp; echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list &gt; /dev/null
+</code></pre>
+</li>
+</ul>
+<blockquote>
+<p><strong>3. Install ROS 2 packages:</strong></p>
+</blockquote>
+<ul>
+<li>Update your apt repository caches after setting up the repositories.
+<pre><code>sudo apt update
+</code></pre>
+</li>
+<li>ROS 2 packages are built on frequently updated Ubuntu systems. It is always recommended that you ensure your system is up to date before installing new packages.
+<pre><code>sudo apt upgrade
+</code></pre>
+</li>
+<li><em><strong>Desktop Install (Recommended):</strong></em> ROS, RViz, demos, tutorials.
+<em>(Make sure you install <strong>Desktop</strong> and not <em>ROS-Base</em> or <em>Development tools</em>, as we will be using <em>RViz</em> and other softwares/packages which come pre-installed in Desktop installation.)</em>
+<pre><code>sudo apt install ros-humble-desktop
+</code></pre>
+</li>
+</ul>
+<blockquote>
+<p><strong>4. Environment Setup:</strong></p>
+</blockquote>
+<ul>
+<li>Set up your environment by sourcing the following file.
+<pre><code>source /opt/ros/humble/setup.bash
+</code></pre>
+</li>
+<li>To Automatically add ROS environment variables to your bash session every time a new shell terminal/bash is launched, enter the following command. <em>(Find more about bash <a href="https://www.gnu.org/software/bash/manual/html_node/What-is-Bash_003f.html">here</a>)</em>
+<pre><code>echo "source /opt/ros/humble/setup.bash" &gt;&gt; ~/.bashrc
+</code></pre>
+</li>
+<li>Sourcing bashrc ensures to use updated bashrc using the following command, <em>or</em> it can be done by closing all terminals and re-opening a new terminal.
+<pre><code>source ~/.bashrc
+</code></pre>
+</li>
+</ul>
+<h3 id="check-installation"><a class="header" href="#check-installation">Check installation</a></h3>
+<p>Run the below command on a new terminal after performing all the steps above, this will ensure that the ROS installed on your system is working fine.</p>
+<p>In one terminal, source the setup file and then run a C++ <em><strong>talker</strong></em>:</p>
+<pre><code>ros2 run demo_nodes_cpp talker
+</code></pre>
+<p>In another terminal source the setup file and then run a Python <em><strong>listener</strong></em>:</p>
+<pre><code>ros2 run demo_nodes_py listener
+</code></pre>
+<p>You should see the <em><strong>talker</strong></em> saying that it’s <em><strong>publishing</strong></em> messages and the <em><strong>listener</strong></em> saying <em><strong>I heard</strong></em> those messages. This verifies both the <em>C++</em> and <em>Python APIs</em> are working properly. Check the image below for reference.</p>
+<img style="margin-top: 10px;" height="250px" src="resources/ros2_test.png">
+<p>Check typing <code>rviz2</code> in a new terminal to launch RViz. You should see the RViz window as shown below.</p>
+<img style="margin-top: 10px;" height="550px" src="resources/rviz2.png">
+</br>
+<blockquote>
+<p><em><strong>Hooray! This confirms that ROS2 Humble has been installed successfully in your system and is running perfectly.</strong></em></p>
+</blockquote>
+<h3 id="references"><a class="header" href="#references">References</a></h3>
+<ul>
+<li>
+<p><a href="https://docs.ros.org/en/humble/index.html">Official ROS2 Humble Documentation</a></p>
+</li>
+<li>
+<p><a href="https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html">ROS Humble Installation Instructions for Ubuntu</a></p>
+</li>
+</ul>
+</br>
 <hr />
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../GSWR2/introduction_installation/intro_install.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
 
-                            <a rel="next" href="GSWR2/GSWR2_welcome.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../../GSWR2/ros2_design_concepts/ros2_design_concepts.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -283,8 +368,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../GSWR2/introduction_installation/intro_install.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
 
-                    <a rel="next" href="GSWR2/GSWR2_welcome.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../../GSWR2/ros2_design_concepts/ros2_design_concepts.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
@@ -299,16 +387,16 @@
         </script>
 
 
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
 
-        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
-        <script type="text/javascript" src="sidebar.js"></script>
+        <script type="text/javascript" src="../../sidebar.js"></script>
 
 
     </body>

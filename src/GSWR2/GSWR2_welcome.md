@@ -66,8 +66,8 @@ In this course, you will learn:
 
 This MOOC is structured to take you from the basics to a competent level of ROS2 proficiency. We will start with fundamental concepts and gradually move to more advanced topics. While this course focuses on the essentials, more specialized subjects will be covered in dedicated courses. In the current "Getting Started With ROS2" we will focus on core basics of ROS2.
 
-> - **<u>Introduction and Installation Setup:</u>**
-> 	- In this module, we will set up the system by installing required software components. You will learn how to install ROS2 Humble on Ubuntu 22.04 Linux systems and set up Gazebo and ROS2 environments.
+> - **[Introduction and Installation Setup:](introduction_installation/intro_install.md)**
+> 	- In this module, we will set up the system by installing required software components. You will learn how to install ROS2 Humble on Ubuntu 22.04 Linux systems while set up and configure ROS2 environments.
 > 
 > - **<u>ROS2 Design concepts:</u>**
 > 	- This module will cover the basics history of ROS, the difference between ROS1 and ROS2, what is a Data Distribution Service, and ROS2 design concepts.

@@ -6,7 +6,8 @@
 
 - [Getting Started With ROS2](GSWR2/GSWR2_welcome.md)
   - [Introduction and Installation Setup](GSWR2/introduction_installation/intro_install.md)
-
+    - [ROS2 Humble Installation](GSWR2/introduction_installation/humble_installation.md)
+  - [ROS2 Design concepts](GSWR2/ros2_design_concepts/ros2_design_concepts.md)
 
 <!-- - [Remove This](Task_0/task_0.md)
   - [Task 0](Task_0/task_0.md)
