@@ -68,7 +68,7 @@
   - Real-time data distribution and communication
   - Scalability and flexibility in distributed systems
 
-> **4. ROS2 Design Concepts**
+> **[4. ROS2 Design Concepts](design_concepts.md)**
 - **Nodes and Components**
   - Definition and role of nodes in ROS2
   - Composition and lifecycle of nodes
@@ -94,13 +94,6 @@
 - **Interoperability and Integration**
   - Integration with other systems and frameworks
   - Interoperability with ROS1 (ROS1-ROS2 bridge)
-
-> **5. Conclusion**
-- **Summary**
-  - Recap of key points covered in the module
-- **Further Reading and Resources**
-  - Recommended resources for deeper understanding
-  - Community forums and discussion groups
 
 </br>
 
