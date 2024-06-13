@@ -10,8 +10,8 @@
   - [ROS2 Design concepts](GSWR2/ros2_design_concepts/ros2_design_concepts.md)
     - [1. History of ROS](GSWR2/ros2_design_concepts/history_of_ros.md)
     - [2. Differences between ROS1 and ROS2](GSWR2/ros2_design_concepts/diff_ros_1_and_2.md)
-    <!-- - [3. Data Distribution Service (DDS)](GSWR2/ros2_design_concepts/diff_ros_1_and_2.md)
-    - [4. ROS2 Design Concepts](GSWR2/ros2_design_concepts/diff_ros_1_and_2.md)
+    - [3. Data Distribution Service (DDS)](GSWR2/ros2_design_concepts/dds.md)
+    <!-- - [4. ROS2 Design Concepts](GSWR2/ros2_design_concepts/diff_ros_1_and_2.md)
     - [5. Conclusion](GSWR2/ros2_design_concepts/diff_ros_1_and_2.md) -->
 
 <!-- - [Remove This](Task_0/task_0.md)
