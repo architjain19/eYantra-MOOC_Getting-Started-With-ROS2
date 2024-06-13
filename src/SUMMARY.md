@@ -8,6 +8,7 @@
   - [Introduction and Installation Setup](GSWR2/introduction_installation/intro_install.md)
     - [ROS2 Humble Installation](GSWR2/introduction_installation/humble_installation.md)
   - [ROS2 Design concepts](GSWR2/ros2_design_concepts/ros2_design_concepts.md)
+    - [1. History of ROS](GSWR2/ros2_design_concepts/history_of_ros.md)
 
 <!-- - [Remove This](Task_0/task_0.md)
   - [Task 0](Task_0/task_0.md)

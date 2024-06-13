@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Introduction and Installation Setup - e-Yantra Robotics Competition - ROS2 MOOC</title>
+        <title>1. History of ROS - e-Yantra Robotics Competition - ROS2 MOOC</title>
 
 
         <!-- Custom HTML head -->
@@ -86,7 +86,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item affix "><a href="../../welcome.html">Welcome to ROS2 MOOC !</a></li><li class="chapter-item affix "><li class="spacer"></li><li class="chapter-item expanded "><a href="../../GSWR2/GSWR2_welcome.html">Getting Started With ROS2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../GSWR2/introduction_installation/intro_install.html" class="active">Introduction and Installation Setup</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../GSWR2/introduction_installation/humble_installation.html">ROS2 Humble Installation</a></li></ol></li><li class="chapter-item "><a href="../../GSWR2/ros2_design_concepts/ros2_design_concepts.html">ROS2 Design concepts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../GSWR2/ros2_design_concepts/history_of_ros.html">1. History of ROS</a></li></ol></li></ol></li><li class="chapter-item "><li class="spacer"></li><li class="chapter-item "><div>Bonus Blogs!</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../bonus_blogs/git_github.html">Git and GitHub</a></li><li class="chapter-item "><a href="../../bonus_blogs/github_challenge.html">Github Challenge</a></li><li class="chapter-item "><a href="../../bonus_blogs/coding_std.html">Coding Standards</a></li></ol></li><li class="chapter-item "><li class="spacer"></li></ol>
+                <ol class="chapter"><li class="chapter-item affix "><a href="../../welcome.html">Welcome to ROS2 MOOC !</a></li><li class="chapter-item affix "><li class="spacer"></li><li class="chapter-item expanded "><a href="../../GSWR2/GSWR2_welcome.html">Getting Started With ROS2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../GSWR2/introduction_installation/intro_install.html">Introduction and Installation Setup</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../GSWR2/introduction_installation/humble_installation.html">ROS2 Humble Installation</a></li></ol></li><li class="chapter-item expanded "><a href="../../GSWR2/ros2_design_concepts/ros2_design_concepts.html">ROS2 Design concepts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../GSWR2/ros2_design_concepts/history_of_ros.html" class="active">1. History of ROS</a></li></ol></li></ol></li><li class="chapter-item "><li class="spacer"></li><li class="chapter-item "><div>Bonus Blogs!</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../bonus_blogs/git_github.html">Git and GitHub</a></li><li class="chapter-item "><a href="../../bonus_blogs/github_challenge.html">Github Challenge</a></li><li class="chapter-item "><a href="../../bonus_blogs/coding_std.html">Coding Standards</a></li></ol></li><li class="chapter-item "><li class="spacer"></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -232,39 +232,76 @@
 </style>
 <!-- <img src="http://mooc.e-yantra.org/img/EyantraLogoMini.png" class="back"> -->
 <center>
-    <h1 id="installation-instructions-for-this-course"><a class="header" href="#installation-instructions-for-this-course">Installation Instructions for this course</a></h1>
+    <h1 id="history-of-ros"><a class="header" href="#history-of-ros">History of ROS</a></h1>
 </center>
 <hr />
-</br>
-<p><em>In order to start with this course, you will need to install the following OS:</em></p>
+<h3 id="1-the-evolution-of-robotics-from-ros-to-ros2"><a class="header" href="#1-the-evolution-of-robotics-from-ros-to-ros2">1. The Evolution of Robotics: From ROS to ROS2</a></h3>
 <blockquote>
-<p><em><strong>Important Note</strong></em>:</p>
+<p>The world of robotics has witnessed tremendous advancements over the years, largely thanks to the development and evolution of the Robot Operating System (ROS). This blog delves into the fascinating history of ROS, its early beginnings, key milestones, and the evolution to ROS2, highlighting the limitations of ROS1 and the community-driven development of ROS2.</p>
+</blockquote>
+<h3 id="early-beginnings"><a class="header" href="#early-beginnings">Early Beginnings</a></h3>
+<blockquote>
+<p>The journey of ROS began with a vision to create a flexible framework for writing robot software. The inception of ROS (Robot Operating System) was driven by the need to provide a standardized platform that could support a wide variety of robotic applications.</p>
+</blockquote>
+<h3 id="origin-of-ros"><a class="header" href="#origin-of-ros">Origin of ROS</a></h3>
+<blockquote>
+<p>ROS originated at the Stanford Artificial Intelligence Laboratory in 2007, spearheaded by researchers who recognized the need for a robust and flexible software platform for robotics. It was officially launched by Willow Garage, a robotics research lab, in 2009. The primary aim was to create a collaborative environment where researchers and developers could share code and build upon each other's work.</p>
+</blockquote>
+<h3 id="the-initial-purpose-and-goals-of-ros"><a class="header" href="#the-initial-purpose-and-goals-of-ros">The Initial Purpose and Goals of ROS</a></h3>
+<blockquote>
+<p>The initial goals of ROS were straightforward yet ambitious:</p>
 <ul>
-<li><strong>We highly recommend to <em>NOT</em> use Virtual Machine as a setup for this course.</strong></li>
-<li>One should only install Ubuntu version <em>22.04 (Jammy Jellyfish)</em>.</li>
-<li>ROS 2 (<em>Humble Hawksbill</em>), is available only for <em>Ubuntu Jammy (22.04)</em>.</li>
+<li>To provide a standard for robotic software development.</li>
+<li>To foster code reuse and collaboration among researchers and developers.</li>
+<li>To offer a modular and scalable architecture that could support diverse robotic systems.</li>
+</ul>
+<p>ROS aimed to simplify the complex task of robot programming, allowing developers to focus on innovation rather than reinventing the wheel for common functionalities.</p>
+</blockquote>
+<h3 id="key-milestones-in-ros-development"><a class="header" href="#key-milestones-in-ros-development">Key Milestones in ROS Development</a></h3>
+<blockquote>
+<p>Several key milestones mark the development and growth of ROS:</p>
+<ul>
+<li><strong>2009</strong>: The first official release, ROS 1.0, was made public, marking the beginning of a new era in robotic software development.</li>
+<li><strong>2010</strong>: The launch of the PR2 robot, powered by ROS, demonstrated the capabilities of ROS in real-world applications.</li>
+<li><strong>2011</strong>: The introduction of the ROS-I (ROS-Industrial) initiative expanded ROS's reach into the industrial robotics sector.</li>
+<li><strong>2015</strong>: The release of ROS Kinetic Kame, one of the most popular ROS distributions, brought significant improvements and stability to the platform. And so on...</li>
 </ul>
 </blockquote>
-<ul>
-<li>
-<h2 id="ubuntu-2204-download-link"><a class="header" href="#ubuntu-2204-download-link">Ubuntu 22.04 (<a href="https://releases.ubuntu.com/jammy/ubuntu-22.04.4-desktop-amd64.iso">Download Link</a>)</a></h2>
-  <img style="margin-top: 10px;" height="200px" src="https://cdn-icons-png.flaticon.com/512/5969/5969282.png">
-</li>
-<li>
-<h2 id="ubuntu-2204-installation-guide"><a class="header" href="#ubuntu-2204-installation-guide">Ubuntu 22.04 (<a href="https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview">Installation Guide</a>)</a></h2>
-  <img style="margin-top: 10px;" height="200px" src="https://assets.ubuntu.com/v1/6855ab78-welcome-screen.png">
-</li>
-</ul>
-<p></p>
-</br>
 <hr />
+<h3 id="2-evolution-to-ros2"><a class="header" href="#2-evolution-to-ros2">2. Evolution to ROS2</a></h3>
+<blockquote>
+<p>Despite its success, ROS1 had limitations that needed to be addressed to keep up with the evolving needs of modern robotics. This led to the development of ROS2.</p>
+</blockquote>
+<h3 id="the-need-for-ros2-limitations-of-ros1"><a class="header" href="#the-need-for-ros2-limitations-of-ros1">The Need for ROS2: Limitations of ROS1</a></h3>
+<blockquote>
+<p>ROS1, while groundbreaking, had several limitations:</p>
 <ul>
-<li>
-<h2 id="ros-2-humble-hawksbill-installation-guide"><a class="header" href="#ros-2-humble-hawksbill-installation-guide">ROS 2 Humble Hawksbill (<a href="humble_installation.html">Installation Guide</a>)</a></h2>
-  <img style="margin-top: 10px;" src="../../common_resources/humble.png" height="200px">
-</li>
+<li><strong>Real-Time Performance</strong>: ROS1 was not designed with real-time performance in mind, making it unsuitable for applications requiring stringent timing constraints.</li>
+<li><strong>Security</strong>: The lack of built-in security features in ROS1 posed risks for applications where security was critical.</li>
+<li><strong>Scalability and Flexibility</strong>: As robotic systems grew in complexity, the need for a more scalable and flexible framework became apparent.</li>
+<li><strong>Cross-Platform Support</strong>: ROS1 was primarily designed for Unix-based systems, limiting its use in other environments.</li>
 </ul>
-<p></p>
+<p>These limitations highlighted the need for a next-generation ROS that could address these challenges and support the future of robotics.</p>
+</blockquote>
+<h3 id="introduction-to-ros2-development"><a class="header" href="#introduction-to-ros2-development">Introduction to ROS2 Development</a></h3>
+<blockquote>
+<p>The development of ROS2 began in earnest to overcome the shortcomings of ROS1. The goal was to create a robust, secure, and scalable framework that could cater to the diverse needs of modern robotics. Key objectives included:</p>
+<ul>
+<li><strong>Enhanced Real-Time Capabilities</strong>: Introducing features to support real-time performance.</li>
+<li><strong>Built-In Security</strong>: Integrating security features to protect robotic systems.</li>
+<li><strong>Improved Scalability</strong>: Designing a more flexible architecture that could scale with the complexity of robotic applications.</li>
+<li><strong>Cross-Platform Compatibility</strong>: Ensuring support for multiple operating systems, including Windows, Linux, and macOS.</li>
+</ul>
+</blockquote>
+<h3 id="community-involvement-and-contributions"><a class="header" href="#community-involvement-and-contributions">Community Involvement and Contributions</a></h3>
+<blockquote>
+<p>One of the hallmarks of ROS development has been the active involvement of the global robotics community. The transition from ROS1 to ROS2 was no different. Researchers, developers, and enthusiasts from around the world contributed to the development and testing of ROS2. Open-source collaboration played a crucial role in refining the features, fixing bugs, and ensuring that ROS2 met the needs of its diverse user base.</p>
+<p>The community-driven approach not only accelerated the development process but also ensured that ROS2 incorporated a wide range of perspectives and expertise, making it a robust and versatile platform for the future of robotics.</p>
+</blockquote>
+<h3 id="conclusion"><a class="header" href="#conclusion">Conclusion</a></h3>
+<blockquote>
+<p>The history of ROS is a testament to the power of collaboration and innovation in the field of robotics. From its early beginnings at Stanford to its evolution into ROS2, the Robot Operating System has continuously pushed the boundaries of what is possible in robotic software development. With ROS2, the future of robotics looks even brighter, promising enhanced performance, security, and scalability to meet the demands of tomorrow's robotic applications.</p>
+</blockquote>
 </br>
 <hr />
 
@@ -272,11 +309,11 @@
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../../GSWR2/GSWR2_welcome.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../GSWR2/ros2_design_concepts/ros2_design_concepts.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="../../GSWR2/introduction_installation/humble_installation.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../../bonus_blogs/git_github.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -286,11 +323,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../../GSWR2/GSWR2_welcome.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../GSWR2/ros2_design_concepts/ros2_design_concepts.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../../GSWR2/introduction_installation/humble_installation.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../../bonus_blogs/git_github.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
