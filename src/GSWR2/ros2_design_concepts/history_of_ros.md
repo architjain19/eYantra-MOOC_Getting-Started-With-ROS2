@@ -50,6 +50,10 @@
 > - **2011**: The introduction of the ROS-I (ROS-Industrial) initiative expanded ROS's reach into the industrial robotics sector.
 > - **2015**: The release of ROS Kinetic Kame, one of the most popular ROS distributions, brought significant improvements and stability to the platform. And so on...
 
+<center>
+<img src="resources/ros_distro.png" />
+</center>
+
 ---
 
 ### Evolution to ROS2
@@ -83,6 +87,10 @@
 ### Conclusion
 
 > The history of ROS is a testament to the power of collaboration and innovation in the field of robotics. From its early beginnings at Stanford to its evolution into ROS2, the Robot Operating System has continuously pushed the boundaries of what is possible in robotic software development. With ROS2, the future of robotics looks even brighter, promising enhanced performance, security, and scalability to meet the demands of tomorrow's robotic applications.
+
+### References
+
+One can refer this blog by The ConstructSim on [History of ROS](https://www.theconstruct.ai/history-ros/). It has a detailed explanation on its history.
 
 </br>
 
