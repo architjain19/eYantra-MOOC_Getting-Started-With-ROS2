@@ -35,7 +35,7 @@
   - Introduction to ROS2 development
   - Community involvement and contributions
 
-> **2. Differences between ROS1 and ROS2**
+> **[2. Differences between ROS1 and ROS2](diff_ros_1_and_2.md)**
 - **Architecture**
   - Comparison of the underlying architecture
   - Middleware: ROS1's custom middleware vs. ROS2's DDS

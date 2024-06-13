@@ -21,7 +21,7 @@
 
 ---
 
-### 1. The Evolution of Robotics: From ROS to ROS2
+### The Evolution of Robotics: From ROS to ROS2
 
 > The world of robotics has witnessed tremendous advancements over the years, largely thanks to the development and evolution of the Robot Operating System (ROS). This blog delves into the fascinating history of ROS, its early beginnings, key milestones, and the evolution to ROS2, highlighting the limitations of ROS1 and the community-driven development of ROS2.
 
@@ -52,7 +52,7 @@
 
 ---
 
-### 2. Evolution to ROS2
+### Evolution to ROS2
 
 > Despite its success, ROS1 had limitations that needed to be addressed to keep up with the evolving needs of modern robotics. This led to the development of ROS2.
 
