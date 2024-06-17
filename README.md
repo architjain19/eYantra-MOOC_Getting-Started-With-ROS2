@@ -51,13 +51,16 @@ This MOOC is structured to take you from the basics to a competent level of ROS2
 	- Build and install file explanation
 	- Create custom ROS2 package (Python and CMake) 
 
+- **<u>Overview of Different Communication Protocols in ROS2:</u>**
+	- How ROS Topics, Services and Actions work
+	- ROS CLI commands for topics, services, actions
+  	- Examples of ROS2 topics, services, actions
+
 - **<u>Getting started with RQT visualisation and CLI tools in ROS2:</u>**
 	- ros2 topic/service/action list, info, pub
 	- ros2 run/launch nodes
 	- RQT graph visualisation
 	- ros2 msg list, info, interface, etc
-
-- **<u>Overview of Topics, Publishers, Subscribers and Services in ROS2:</u>**
 
 - **<u>Overview of ROS2 nodes:</u>**
 	- Understanding talker and listener Nodes
