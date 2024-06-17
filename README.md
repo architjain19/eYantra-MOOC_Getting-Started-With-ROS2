@@ -51,16 +51,11 @@ This MOOC is structured to take you from the basics to a competent level of ROS2
 	- Build and install file explanation
 	- Create custom ROS2 package (Python and CMake) 
 
+
 - **<u>Overview of Different Communication Protocols in ROS2:</u>**
 	- How ROS Topics, Services and Actions work
 	- ROS CLI commands for topics, services, actions
-  	- Examples of ROS2 topics, services, actions
-
-- **<u>Getting started with RQT visualisation and CLI tools in ROS2:</u>**
-	- ros2 topic/service/action list, info, pub
-	- ros2 run/launch nodes
-	- RQT graph visualisation
-	- ros2 msg list, info, interface, etc
+	- Examples of ROS2 topics, services, actions
 
 - **<u>Overview of ROS2 nodes:</u>**
 	- Understanding talker and listener Nodes
@@ -71,6 +66,12 @@ This MOOC is structured to take you from the basics to a competent level of ROS2
 	- How to run ROS nodes using launch files
 	- CLI commands to launch files and run ROS nodes
 
+- **<u>Getting started with RQT visualisation and CLI tools in ROS2:</u>**
+	- ros2 topic/service/action list, info, pub
+	- ros2 run/launch nodes
+	- RQT graph visualisation
+	- ros2 msg list, info, interface, etc
+
 - **<u>Overview of Turtlesim:</u>**
 	- CLI operation of turtlesim robot
 	- Create patterns using turtlesim by developing your custom ROS2 nodes
@@ -80,6 +81,7 @@ This MOOC is structured to take you from the basics to a competent level of ROS2
 		- Draw Iron Man using Turtlesim
 		- Snake Game using Turtlesim
 		- Ping Pong using Turtlesim
+
 
 > ### System Requirements:
 

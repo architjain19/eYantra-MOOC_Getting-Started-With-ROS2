@@ -15,6 +15,7 @@
   - [ROS2 Ecosystem and Filesystem](GSWR2/ros2_ecosystem_filesystem/ros2_ecosystem_filesystem.md)
   - [ROS2 Communication Protocols](GSWR2/ros2_comm_proto/ros2_comm_proto.md)
     - [1. Introduction to ROS2 Communication Protocols](GSWR2/ros2_comm_proto/intro_to_comm_proto.md)
+    - [2. ROS2 Topics](GSWR2/ros2_comm_proto/ros2_topics.md)
 
 <!-- - [Remove This](Task_0/task_0.md)
   - [Task 0](Task_0/task_0.md)
