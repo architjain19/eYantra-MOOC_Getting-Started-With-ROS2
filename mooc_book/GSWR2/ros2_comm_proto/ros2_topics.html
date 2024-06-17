@@ -232,57 +232,149 @@
 </style>
 <!-- <img src="http://mooc.e-yantra.org/img/EyantraLogoMini.png" class="back"> -->
 <center>
-    <h1 id="introduction-to-ros2-communication-protocols"><a class="header" href="#introduction-to-ros2-communication-protocols">Introduction to ROS2 Communication Protocols</a></h1>
+    <h1 id="understanding-ros2-topics-the-lifeline-of-robot-communication"><a class="header" href="#understanding-ros2-topics-the-lifeline-of-robot-communication">Understanding ROS2 Topics: The Lifeline of Robot Communication</a></h1>
 </center>
 <hr />
-<h3 id="overview-and-importance"><a class="header" href="#overview-and-importance"><strong>Overview and Importance</strong></a></h3>
+<h3 id="concept-and-functionality"><a class="header" href="#concept-and-functionality"><strong>Concept and Functionality</strong></a></h3>
 <blockquote>
-<p><em>Welcome to the exciting world of ROS2, the Robot Operating System that is revolutionizing how robots communicate and interact with each other! In this module, we dive into the communication protocols that make ROS2 a powerful tool for robotics applications. Understanding these protocols is essential for anyone looking to build, control, and optimize robotic systems.</em></p>
+<p><em>Welcome back! Today, we’re diving into one of the most fascinating aspects of ROS2: <strong>Topics</strong>. If you’ve ever wondered how different parts of a robot share information seamlessly, you’re in for a treat. Let’s unpack the magic behind ROS2 Topics and discover how they keep robotic systems ticking.</em></p>
 </blockquote>
-<h3 id="brief-introduction-to-ros2-communication-mechanisms"><a class="header" href="#brief-introduction-to-ros2-communication-mechanisms"><strong>Brief Introduction to ROS2 Communication Mechanisms</strong></a></h3>
+<h4 id="what-are-ros2-topics"><a class="header" href="#what-are-ros2-topics"><strong>What are ROS2 Topics?</strong></a></h4>
 <blockquote>
-<p>ROS2, short for Robot Operating System 2, is an open-source framework that provides the tools and libraries needed to create complex and robust robotic applications. One of the cornerstones of ROS2 is its communication mechanisms, which enable seamless data exchange between different parts of a robotic system. These mechanisms include Topics, Services, and Actions.</p>
+<p>Imagine you’re in a bustling city, and you want to send a message to a friend across town. Instead of calling or texting directly, you drop a letter into a mailbox. Your friend, who checks that mailbox, will eventually get your message. This mailbox is analogous to a <strong>topic</strong> in ROS2. It’s a shared conduit for messages between different parts of a robot.</p>
+<ul>
+<li><strong>Topics</strong>: In ROS2, topics are named buses over which nodes (the various components of your robot) can send and receive messages. Think of them as radio channels. If two nodes tune into the same channel (topic), they can communicate.</li>
+</ul>
+</blockquote>
+<h4 id="messages-publishers-and-subscribers"><a class="header" href="#messages-publishers-and-subscribers"><strong>Messages, Publishers, and Subscribers</strong></a></h4>
+<blockquote>
+<p>To understand how topics work, we need to talk about <strong>messages</strong>, <strong>publishers</strong>, and <strong>subscribers</strong>.</p>
 <ul>
 <li>
-<p><strong>Topics</strong>: Think of topics as the channels through which robots share information. Whether it's sensor data, control commands, or status updates, topics facilitate real-time, asynchronous communication between different nodes in a robotic system.</p>
+<p><strong>Messages</strong>: These are the data packets sent over topics. They can contain anything from sensor readings to command signals. ROS2 uses predefined message types, such as <code>std_msgs/String</code> for text or <code>sensor_msgs/Image</code> for images, to ensure compatibility.</p>
 </li>
 <li>
-<p><strong>Services</strong>: Services in ROS2 function like remote procedure calls. When a node needs to request specific information or actions from another node, it uses services to send a request and receive a response.</p>
+<p><strong>Publishers</strong>: Nodes that generate and send messages are called publishers. They create a topic and push messages to it, like a radio station broadcasting its signal.</p>
 </li>
 <li>
-<p><strong>Actions</strong>: Actions extend the concept of services by allowing nodes to send goals, receive feedback, and get results over time. This is particularly useful for long-running tasks where intermediate feedback is crucial.</p>
+<p><strong>Subscribers</strong>: Nodes that receive messages from a topic are called subscribers. They tune into a specific topic and process incoming messages, just like a radio picks up a broadcast.</p>
+</li>
+</ul>
+<p>This publish-subscribe model is powerful because it decouples data producers and consumers. A publisher doesn’t need to know who (or if anyone) is subscribing, and subscribers don’t need to know who is publishing. This makes the system incredibly flexible and scalable.</p>
+<img src="resources/Topic-SinglePubSub.gif" />
+<p><em>A node may publish data to any number of topics and simultaneously have subscriptions to any number of topics.</em></p>
+<img src="resources/Topic-MultiplePubSub.gif" />
+<p><em>Topics are one of the main ways in which data is moved between nodes and therefore between different parts of the system.</em></p>
+</blockquote>
+<hr />
+<h3 id="practical-example"><a class="header" href="#practical-example"><strong>Practical Example</strong></a></h3>
+<blockquote>
+<p>Let’s see these concepts in action with a simple example: a publisher-subscriber setup where one node sends greetings and another receives them.</p>
+</blockquote>
+<p><strong>Publisher Node (Python)</strong></p>
+<pre><code class="language-python">import rclpy
+from rclpy.node import Node
+from std_msgs.msg import String
+
+class SimplePublisher(Node):
+    def __init__(self):
+        super().__init__('simple_publisher')
+        self.publisher_ = self.create_publisher(String, 'greetings_topic', 10)
+        timer_period = 1.0  # seconds
+        self.timer = self.create_timer(timer_period, self.timer_callback)
+
+    def timer_callback(self):
+        msg = String()
+        msg.data = 'Hello, ROS2!'
+        self.publisher_.publish(msg)
+        self.get_logger().info(f'Publishing: {msg.data}')
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = SimplePublisher()
+    rclpy.spin(node)
+    node.destroy_node()
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
+</code></pre>
+<p><strong>Subscriber Node (Python)</strong></p>
+<pre><code class="language-python">import rclpy
+from rclpy.node import Node
+from std_msgs.msg import String
+
+class SimpleSubscriber(Node):
+    def __init__(self):
+        super().__init__('simple_subscriber')
+        self.subscription = self.create_subscription(
+            String,
+            'greetings_topic',
+            self.listener_callback,
+            10)
+        self.subscription  # prevent unused variable warning
+
+    def listener_callback(self, msg):
+        self.get_logger().info(f'Subscribed: {msg.data}')
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = SimpleSubscriber()
+    rclpy.spin(node)
+    node.destroy_node()
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
+</code></pre>
+<blockquote>
+<p>Here, the <code>SimplePublisher</code> node sends a greeting message "Hello, ROS2!" every second on the <code>greetings_topic</code>. The <code>SimpleSubscriber</code> node listens to this topic and prints the message it receives. This simple interaction demonstrates how topics facilitate communication in ROS2.</p>
+</blockquote>
+<p><strong>Expected Output:</strong></p>
+<blockquote>
+<p>When you run the publisher and subscriber nodes, you should see output like this in the console:</p>
+<p><strong>Publisher Node Output:</strong></p>
+<pre><code>[INFO] [SimplePublisher]: Publishing: Hello, ROS2!
+[INFO] [SimplePublisher]: Publishing: Hello, ROS2!
+[INFO] [SimplePublisher]: Publishing: Hello, ROS2!
+</code></pre>
+<p><strong>Subscriber Node Output:</strong></p>
+<pre><code>[INFO] [SimpleSubscriber]: Subscribed: Hello, ROS2!
+[INFO] [SimpleSubscriber]: Subscribed: Hello, ROS2!
+[INFO] [SimpleSubscriber]: Subscribed: Hello, ROS2!
+</code></pre>
+</blockquote>
+<hr />
+<h3 id="ros-cli-commands"><a class="header" href="#ros-cli-commands"><strong>ROS CLI Commands</strong></a></h3>
+<blockquote>
+<p>ROS2 provides a powerful command-line interface (CLI) for interacting with topics. Here are some essential commands that will make your life easier:</p>
+<ul>
+<li>
+<p><strong>Listing Topics</strong></p>
+<pre><code class="language-sh">ros2 topic list
+</code></pre>
+<p>Use this command to see all active topics in your ROS2 system. It’s like scanning for all available radio stations.</p>
+</li>
+<li>
+<p><strong>Echoing Topic Messages</strong></p>
+<pre><code class="language-sh">ros2 topic echo /greetings_topic
+</code></pre>
+<p>This command prints messages being published on a topic in real-time. It’s useful for debugging and monitoring the data flow.</p>
+</li>
+<li>
+<p><strong>Publishing Messages</strong></p>
+<pre><code class="language-sh">ros2 topic pub /greetings_topic std_msgs/String "data: 'Hello from CLI!'"
+</code></pre>
+<p>Manually publish a message to a topic from the command line. It’s a quick way to test your subscribers.</p>
 </li>
 </ul>
 </blockquote>
-<h3 id="importance-of-understanding-communication-protocols-in-robotics-applications"><a class="header" href="#importance-of-understanding-communication-protocols-in-robotics-applications"><strong>Importance of Understanding Communication Protocols in Robotics Applications</strong></a></h3>
+<hr />
+<h3 id="why-topics-matter"><a class="header" href="#why-topics-matter"><strong>Why Topics Matter</strong></a></h3>
 <blockquote>
-<p>Why is it so important to grasp these communication protocols? Here are a few compelling reasons:</p>
-<ol>
-<li>
-<p><strong>Efficiency</strong>: By understanding how topics, services, and actions work, you can design more efficient and responsive robotic systems. Efficient communication reduces latency and ensures that data flows smoothly between different components.</p>
-</li>
-<li>
-<p><strong>Scalability</strong>: As your robotics project grows, having a solid foundation in communication protocols allows you to scale up your system without running into bottlenecks or performance issues.</p>
-</li>
-<li>
-<p><strong>Interoperability</strong>: ROS2's communication mechanisms are designed to be flexible and interoperable. This means you can integrate different sensors, actuators, and software modules seamlessly, creating a cohesive and functional robotic system.</p>
-</li>
-<li>
-<p><strong>Debugging and Maintenance</strong>: Knowing how communication protocols work makes it easier to troubleshoot issues. Whether it's a dropped message or a delayed response, you'll be better equipped to identify and resolve communication problems.</p>
-</li>
-<li>
-<p><strong>Innovation</strong>: With a deep understanding of ROS2's communication mechanisms, you can push the boundaries of what's possible in robotics. From autonomous drones to collaborative robots in manufacturing, the sky's the limit when you master these protocols.</p>
-</li>
-</ol>
+<p>Understanding topics is crucial because they form the backbone of communication in ROS2. They allow you to build modular, scalable, and efficient robotic systems. Whether it’s a simple robot with a few sensors or a complex multi-robot system, mastering topics will enable you to design robust communication architectures.</p>
 </blockquote>
-<h3 id="final-thoughts"><a class="header" href="#final-thoughts"><strong>Final Thoughts</strong></a></h3>
-<blockquote>
-<p>As we embark on this journey through ROS2 communication protocols, remember that these concepts are the building blocks of modern robotics. By mastering topics, services, and actions, you'll be well on your way to creating sophisticated and efficient robotic systems that can tackle real-world challenges. Stay tuned for the next sections, where we'll explore each of these communication mechanisms in detail, complete with practical examples and hands-on projects. Let's unlock the power of robotics communication together!</p>
-</blockquote>
-<blockquote>
-<p><em>Feel free to surf on the internet to find out more about different communication protocols. Happy learning!</em></p>
-</blockquote>
-</br>
+<p><em><strong>In the next sections, we’ll explore ROS2 Services and Actions, which add even more capabilities to your robotic systems. Stay tuned, and keep experimenting with topics to see how they can enhance your projects!</strong></em></p>
 <hr />
 
                     </main>
