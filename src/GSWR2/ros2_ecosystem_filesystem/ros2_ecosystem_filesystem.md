@@ -284,18 +284,40 @@ When you build a ROS2 workspace using Colcon, several directories and files are 
    ```
 
    ```cpp
-   // listener.cpp
-   #include "rclcpp/rclcpp.hpp"
-   #include "std_msgs/msg/string.hpp"
+    // listener.cpp
+    #include "rclcpp/rclcpp.hpp"
+    #include "std_msgs/msg/string.hpp"
 
-   class Listener : public rclcpp::Node
-   {
-   public:
-     Listener()
-       : Node("listener")
-     {
-       subscription_ = this->create_subscription<std_msgs::msg::String>(
-         "chatter", 10, std::bind(&Listener
+    class Listener : public rclcpp::Node
+    {
+    public:
+    Listener()
+        : Node("listener")
+    {
+        subscription_ = this->create_subscription<std_msgs::msg::String>(
+        "chatter", 10, std::bind(&Listener::topic_callback, this, std::placeholders::_1));
+    }
+
+    private:
+    void topic_callback(const std_msgs::msg::String::SharedPtr msg) const
+    {
+        RCLCPP_INFO(this->get_logger(), "I heard: '%s'", msg->data.c_str());
+    }
+    rclcpp::Subscription<std_msgs::msg::String>::SharedPtr subscription_;
+    };
+
+    int main(int argc, char * argv[])
+    {
+    rclcpp::init(argc, argv);
+    rclcpp::spin(std::make_shared<Listener>());
+    rclcpp::shutdown();
+    return 0;
+    }
+    ```
+
+### Conclusion
+
+> Understanding the ROS2 ecosystem and filesystem is crucial for effective robot software development. By mastering the concepts of underlay and overlay workspaces, creating Colcon workspaces, and building custom packages in Python and C++, you can streamline your development process and create robust robotic applications. Whether you're a beginner or an experienced developer, these foundational skills will help you navigate the ROS2 environment with confidence.
 
 </br>
 
