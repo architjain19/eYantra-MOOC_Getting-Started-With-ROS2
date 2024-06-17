@@ -12,6 +12,7 @@
     - [2. Differences between ROS1 and ROS2](GSWR2/ros2_design_concepts/diff_ros_1_and_2.md)
     - [3. Data Distribution Service (DDS)](GSWR2/ros2_design_concepts/dds.md)
     - [4. ROS2 Design Concepts](GSWR2/ros2_design_concepts/design_concepts.md)
+  - [ROS2 Ecosystem and Filesystem](GSWR2/ros2_ecosystem_filesystem/ros2_ecosystem_filesystem.md)
 
 <!-- - [Remove This](Task_0/task_0.md)
   - [Task 0](Task_0/task_0.md)
