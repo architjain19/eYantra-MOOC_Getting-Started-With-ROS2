@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>1. Introduction to ROS2 Communication Protocols - e-Yantra Robotics Competition - ROS2 MOOC</title>
+        <title>1. RQT visualisation - e-Yantra Robotics Competition - ROS2 MOOC</title>
 
 
         <!-- Custom HTML head -->
@@ -86,7 +86,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item affix "><a href="../../welcome.html">Welcome to ROS2 MOOC !</a></li><li class="chapter-item affix "><li class="spacer"></li><li class="chapter-item expanded "><a href="../../GSWR2/GSWR2_welcome.html">Getting Started With ROS2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../GSWR2/introduction_installation/intro_install.html">Introduction and Installation Setup</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../GSWR2/introduction_installation/humble_installation.html">ROS2 Humble Installation</a></li></ol></li><li class="chapter-item "><a href="../../GSWR2/ros2_design_concepts/ros2_design_concepts.html">ROS2 Design concepts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../GSWR2/ros2_design_concepts/history_of_ros.html">1. History of ROS</a></li><li class="chapter-item "><a href="../../GSWR2/ros2_design_concepts/diff_ros_1_and_2.html">2. Differences between ROS1 and ROS2</a></li><li class="chapter-item "><a href="../../GSWR2/ros2_design_concepts/dds.html">3. Data Distribution Service (DDS)</a></li><li class="chapter-item "><a href="../../GSWR2/ros2_design_concepts/design_concepts.html">4. ROS2 Design Concepts</a></li></ol></li><li class="chapter-item "><a href="../../GSWR2/ros2_ecosystem_filesystem/ros2_ecosystem_filesystem.html">ROS2 Ecosystem and Filesystem</a></li><li class="chapter-item expanded "><a href="../../GSWR2/ros2_comm_proto/ros2_comm_proto.html">ROS2 Communication Protocols</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../GSWR2/ros2_comm_proto/intro_to_comm_proto.html" class="active">1. Introduction to ROS2 Communication Protocols</a></li><li class="chapter-item "><a href="../../GSWR2/ros2_comm_proto/ros2_topics.html">2. ROS2 Topics</a></li></ol></li><li class="chapter-item "><a href="../../GSWR2/ros2_RQT_visualisation_CLI_tools/ros2_RQT_visualisation_CLI_tools.html">ros2 RQT visualisation CLI tools</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../GSWR2/ros2_RQT_visualisation_CLI_tools/1_RQT_visualisation.html">1. RQT visualisation</a></li><li class="chapter-item "><a href="../../GSWR2/ros2_RQT_visualisation_CLI_tools/2_CLI_tool.html">2. CLI Tools</a></li></ol></li><li class="chapter-item "><a href="../../GSWR2/ros2_overview_of_turtlesim/ros2_overview_of_turtlesim.html">Overview Of Turtlesim</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../GSWR2/ros2_overview_of_turtlesim/1_key_components.html">Key Components</a></li><li class="chapter-item "><a href="../../GSWR2/ros2_overview_of_turtlesim/2_turtle_simulator.html">Turtle Simulator</a></li><li class="chapter-item "><a href="../../GSWR2/ros2_overview_of_turtlesim/3_creating_second_turtle.html">Creating a Second Turtle</a></li><li class="chapter-item "><a href="../../GSWR2/ros2_overview_of_turtlesim/4_controlling_2D_turtle_twist_messages.html">Controlling a 2D Turtle with Twist Messages</a></li></ol></li></ol></li><li class="chapter-item "><div>Bonus Blogs!</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../bonus_blogs/git_github.html">Git and GitHub</a></li><li class="chapter-item "><a href="../../bonus_blogs/github_challenge.html">Github Challenge</a></li><li class="chapter-item "><a href="../../bonus_blogs/coding_std.html">Coding Standards</a></li></ol></li><li class="chapter-item "><li class="spacer"></li></ol>
+                <ol class="chapter"><li class="chapter-item affix "><a href="../../welcome.html">Welcome to ROS2 MOOC !</a></li><li class="chapter-item affix "><li class="spacer"></li><li class="chapter-item expanded "><a href="../../GSWR2/GSWR2_welcome.html">Getting Started With ROS2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../GSWR2/introduction_installation/intro_install.html">Introduction and Installation Setup</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../GSWR2/introduction_installation/humble_installation.html">ROS2 Humble Installation</a></li></ol></li><li class="chapter-item "><a href="../../GSWR2/ros2_design_concepts/ros2_design_concepts.html">ROS2 Design concepts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../GSWR2/ros2_design_concepts/history_of_ros.html">1. History of ROS</a></li><li class="chapter-item "><a href="../../GSWR2/ros2_design_concepts/diff_ros_1_and_2.html">2. Differences between ROS1 and ROS2</a></li><li class="chapter-item "><a href="../../GSWR2/ros2_design_concepts/dds.html">3. Data Distribution Service (DDS)</a></li><li class="chapter-item "><a href="../../GSWR2/ros2_design_concepts/design_concepts.html">4. ROS2 Design Concepts</a></li></ol></li><li class="chapter-item "><a href="../../GSWR2/ros2_ecosystem_filesystem/ros2_ecosystem_filesystem.html">ROS2 Ecosystem and Filesystem</a></li><li class="chapter-item "><a href="../../GSWR2/ros2_comm_proto/ros2_comm_proto.html">ROS2 Communication Protocols</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../GSWR2/ros2_comm_proto/intro_to_comm_proto.html">1. Introduction to ROS2 Communication Protocols</a></li><li class="chapter-item "><a href="../../GSWR2/ros2_comm_proto/ros2_topics.html">2. ROS2 Topics</a></li></ol></li><li class="chapter-item expanded "><a href="../../GSWR2/ros2_RQT_visualisation_CLI_tools/ros2_RQT_visualisation_CLI_tools.html">ros2 RQT visualisation CLI tools</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../GSWR2/ros2_RQT_visualisation_CLI_tools/1_RQT_visualisation.html" class="active">1. RQT visualisation</a></li><li class="chapter-item "><a href="../../GSWR2/ros2_RQT_visualisation_CLI_tools/2_CLI_tool.html">2. CLI Tools</a></li></ol></li><li class="chapter-item "><a href="../../GSWR2/ros2_overview_of_turtlesim/ros2_overview_of_turtlesim.html">Overview Of Turtlesim</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../GSWR2/ros2_overview_of_turtlesim/1_key_components.html">Key Components</a></li><li class="chapter-item "><a href="../../GSWR2/ros2_overview_of_turtlesim/2_turtle_simulator.html">Turtle Simulator</a></li><li class="chapter-item "><a href="../../GSWR2/ros2_overview_of_turtlesim/3_creating_second_turtle.html">Creating a Second Turtle</a></li><li class="chapter-item "><a href="../../GSWR2/ros2_overview_of_turtlesim/4_controlling_2D_turtle_twist_messages.html">Controlling a 2D Turtle with Twist Messages</a></li></ol></li></ol></li><li class="chapter-item "><div>Bonus Blogs!</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../bonus_blogs/git_github.html">Git and GitHub</a></li><li class="chapter-item "><a href="../../bonus_blogs/github_challenge.html">Github Challenge</a></li><li class="chapter-item "><a href="../../bonus_blogs/coding_std.html">Coding Standards</a></li></ol></li><li class="chapter-item "><li class="spacer"></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -216,84 +216,140 @@
 
                 <div id="content" class="content">
                     <main>
-                        <!-- <center><img src="http://mooc.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" style="scale:75%;" /></center> -->
-<style>
-.back{
-	position: fixed;
-	width: 250px;
-	height: 250px;
-	top: 50%;
-	left: 50%;
-    margin-top: auto; 
-    margin-left: auto; 
-	opacity: 0.15;
-    z-index: -1;
-	}
-</style>
-<!-- <img src="http://mooc.e-yantra.org/img/EyantraLogoMini.png" class="back"> -->
-<center>
-    <h1 id="introduction-to-ros2-communication-protocols"><a class="header" href="#introduction-to-ros2-communication-protocols">Introduction to ROS2 Communication Protocols</a></h1>
-</center>
-<hr />
-<h3 id="overview-and-importance"><a class="header" href="#overview-and-importance"><strong>Overview and Importance</strong></a></h3>
-<blockquote>
-<p><em>Welcome to the exciting world of ROS2, the Robot Operating System that is revolutionizing how robots communicate and interact with each other! In this module, we dive into the communication protocols that make ROS2 a powerful tool for robotics applications. Understanding these protocols is essential for anyone looking to build, control, and optimize robotic systems.</em></p>
-</blockquote>
-<h3 id="brief-introduction-to-ros2-communication-mechanisms"><a class="header" href="#brief-introduction-to-ros2-communication-mechanisms"><strong>Brief Introduction to ROS2 Communication Mechanisms</strong></a></h3>
-<blockquote>
-<p>ROS2, short for Robot Operating System 2, is an open-source framework that provides the tools and libraries needed to create complex and robust robotic applications. One of the cornerstones of ROS2 is its communication mechanisms, which enable seamless data exchange between different parts of a robotic system. These mechanisms include Topics, Services, and Actions.</p>
+                        <h1 id="rqt-visualisation"><a class="header" href="#rqt-visualisation">RQT Visualisation</a></h1>
+<p>One of the most powerful and versatile tools in ROS is RQT (ROS Qt-based Graphical User Interface Tools).</p>
+<h3 id="what-is-rqt"><a class="header" href="#what-is-rqt">What is RQT?</a></h3>
+<p>RQT is an integral part of the Robot Operating System (ROS) ecosystem, designed to facilitate the interaction, visualization, and analysis of ROS-based robotics systems. As a collection of graphical user interface (GUI) plugins, RQT leverages the power of the Qt framework, a versatile, cross-platform toolkit for creating complex and robust GUIs.</p>
+<h3 id="key-features-and-capabilities-of-rqt"><a class="header" href="#key-features-and-capabilities-of-rqt">Key Features and Capabilities of RQT</a></h3>
 <ul>
 <li>
-<p><strong>Topics</strong>: Think of topics as the channels through which robots share information. Whether it's sensor data, control commands, or status updates, topics facilitate real-time, asynchronous communication between different nodes in a robotic system.</p>
+<p><strong>Visualization</strong></p>
+<ul>
+<li>RQT Plot: A plugin for plotting data in real-time, useful for monitoring sensor data, robot states, and other variables.</li>
+<li>RQT Graph: This visualizes the computational graph of ROS nodes and the communication between them, helping developers understand the flow of data and interactions within the system.</li>
+<li>RQT Image View: A tool for displaying image data from cameras or other imaging sensors in real-time, which is critical for tasks like computer vision and navigation.</li>
+</ul>
 </li>
 <li>
-<p><strong>Services</strong>: Services in ROS2 function like remote procedure calls. When a node needs to request specific information or actions from another node, it uses services to send a request and receive a response.</p>
+<p><strong>Analysis</strong></p>
+<ul>
+<li>RQT Console: Provides a logging interface where users can view and filter log messages from different nodes, facilitating debugging and performance monitoring.</li>
+<li>RQT Bag: Allows users to play back and analyze data from ROS bag files, which are used to record and store ROS message data for offline analysis and testing.</li>
+</ul>
 </li>
 <li>
-<p><strong>Actions</strong>: Actions extend the concept of services by allowing nodes to send goals, receive feedback, and get results over time. This is particularly useful for long-running tasks where intermediate feedback is crucial.</p>
+<p><strong>Interaction</strong></p>
+<ul>
+<li>RQT Reconfigure: Enables dynamic reconfiguration of parameters in ROS nodes without restarting them, allowing for real-time tuning and adjustments.</li>
+<li>RQT Service Caller: Provides an interface for calling ROS services, making it easier to interact with service servers directly from a GUI.</li>
+</ul>
 </li>
 </ul>
-</blockquote>
-<h3 id="importance-of-understanding-communication-protocols-in-robotics-applications"><a class="header" href="#importance-of-understanding-communication-protocols-in-robotics-applications"><strong>Importance of Understanding Communication Protocols in Robotics Applications</strong></a></h3>
-<blockquote>
-<p>Why is it so important to grasp these communication protocols? Here are a few compelling reasons:</p>
-<ol>
-<li>
-<p><strong>Efficiency</strong>: By understanding how topics, services, and actions work, you can design more efficient and responsive robotic systems. Efficient communication reduces latency and ensures that data flows smoothly between different components.</p>
-</li>
-<li>
-<p><strong>Scalability</strong>: As your robotics project grows, having a solid foundation in communication protocols allows you to scale up your system without running into bottlenecks or performance issues.</p>
-</li>
-<li>
-<p><strong>Interoperability</strong>: ROS2's communication mechanisms are designed to be flexible and interoperable. This means you can integrate different sensors, actuators, and software modules seamlessly, creating a cohesive and functional robotic system.</p>
-</li>
-<li>
-<p><strong>Debugging and Maintenance</strong>: Knowing how communication protocols work makes it easier to troubleshoot issues. Whether it's a dropped message or a delayed response, you'll be better equipped to identify and resolve communication problems.</p>
-</li>
-<li>
-<p><strong>Innovation</strong>: With a deep understanding of ROS2's communication mechanisms, you can push the boundaries of what's possible in robotics. From autonomous drones to collaborative robots in manufacturing, the sky's the limit when you master these protocols.</p>
-</li>
-</ol>
-</blockquote>
-<h3 id="final-thoughts"><a class="header" href="#final-thoughts"><strong>Final Thoughts</strong></a></h3>
-<blockquote>
-<p>As we embark on this journey through ROS2 communication protocols, remember that these concepts are the building blocks of modern robotics. By mastering topics, services, and actions, you'll be well on your way to creating sophisticated and efficient robotic systems that can tackle real-world challenges. Stay tuned for the next sections, where we'll explore each of these communication mechanisms in detail, complete with practical examples and hands-on projects. Let's unlock the power of robotics communication together!</p>
-</blockquote>
-<blockquote>
-<p><em>Feel free to surf on the internet to find out more about different communication protocols. Happy learning!</em></p>
-</blockquote>
-</br>
-<hr />
+<h3 id="how-to-install-rqt-plugin"><a class="header" href="#how-to-install-rqt-plugin">‍How to install rqt plugin</a></h3>
+<pre><code class="language-bash">sudo apt install ros-humble-rqt ros-humble-rqt-common-plugins
+</code></pre>
+<h3 id="verify-installation"><a class="header" href="#verify-installation">Verify Installation:</a></h3>
+<p>After installation, you can verify it by running RQT:</p>
+<pre><code class="language-bash">source /opt/ros/humble/setup.bash
+rqt
+</code></pre>
+<p>This should open the RQT graphical interface. If it opens without errors, the installation was successful.</p>
+<h3 id="useful-plugins-include"><a class="header" href="#useful-plugins-include">useful plugins include:</a></h3>
+<h4 id="1-rqt_graph"><a class="header" href="#1-rqt_graph">1. rqt_graph</a></h4>
+<p>rqt_graph visualizes the ROS computation graph, showing nodes and the topics they publish and subscribe to.</p>
+<h4 id="usage"><a class="header" href="#usage">usage</a></h4>
+<ul>
+<li>Launch rqt_graph from the terminal:</li>
+</ul>
+<pre><code class="language-bash">rqt_graph
+</code></pre>
+<h4 id="features"><a class="header" href="#features">Features:</a></h4>
+<ul>
+<li>The graph will display active nodes and their connections. It helps in understanding the communication flow between different parts of your system.</li>
+<li>Dynamic updates as nodes and topics change.</li>
+<li>Filtering options to focus on specific parts of the graph.</li>
+</ul>
+<h3 id="2-rqt_console"><a class="header" href="#2-rqt_console">2. rqt_console</a></h3>
+<p>rqt_console provides a graphical view of ROS log messages, allowing you to filter and analyze them more easily than with the standard console output.</p>
+<h4 id="usage-1"><a class="header" href="#usage-1">Usage:</a></h4>
+<ul>
+<li>Launch rqt_console from the terminal:</li>
+</ul>
+<pre><code class="language-bash">rqt_console
+</code></pre>
+<h4 id="features-1"><a class="header" href="#features-1">Features:</a></h4>
+<ul>
+<li>The console displays log messages categorized by severity (DEBUG, INFO, WARN, ERROR, FATAL).</li>
+<li>Filtering based on node, severity, and message content.</li>
+<li>Pause and resume log display.</li>
+<li>Save log messages to a file for later analysis.</li>
+</ul>
+<h3 id="3-rqt_plot"><a class="header" href="#3-rqt_plot">3. rqt_plot</a></h3>
+<ul>
+<li>rqt_plot plots numeric values from ROS topics in real-time, providing a graphical representation of sensor data, control signals, or other numerical information.</li>
+</ul>
+<h4 id="usage-2"><a class="header" href="#usage-2">Usage:</a></h4>
+<ul>
+<li>Launch rqt_plot from the terminal:</li>
+</ul>
+<pre><code class="language-bash">rqt_plot
+</code></pre>
+<ul>
+<li>Enter the topic names you want to plot.</li>
+</ul>
+<h3 id="add-image"><a class="header" href="#add-image">add image</a></h3>
+<h4 id="features-2"><a class="header" href="#features-2">Features:</a></h4>
+<ul>
+<li>Supports multiple plots and multiple topics per plot.</li>
+<li>Customizable axes and scales.</li>
+<li>Useful for monitoring real-time data trends.</li>
+</ul>
+<h3 id="4-rqt_image_view"><a class="header" href="#4-rqt_image_view">4. rqt_image_view</a></h3>
+<p>rqt_image_view displays images from ROS topics, useful for monitoring camera feeds or processed images.</p>
+<h4 id="usage-3"><a class="header" href="#usage-3">Usage:</a></h4>
+<ul>
+<li>Launch rqt_image_view from the terminal:</li>
+</ul>
+<pre><code class="language-bash">rqt_image_view
+</code></pre>
+<ul>
+<li>Select the image topic you want to display.</li>
+</ul>
+<h3 id="add-image-1"><a class="header" href="#add-image-1">add image</a></h3>
+<h4 id="features-3"><a class="header" href="#features-3">Features:</a></h4>
+<ul>
+<li>Real-time display of image streams.</li>
+<li>Supports different image formats and encoding types.</li>
+<li>Adjustable display settings like zoom and rotation.</li>
+</ul>
+<h3 id="5-rqt_tf_tree"><a class="header" href="#5-rqt_tf_tree">5. rqt_tf_tree</a></h3>
+<p>rqt_tf_tree visualizes the TF (transform) tree, showing the relationship between coordinate frames in ROS.</p>
+<h4 id="usage-4"><a class="header" href="#usage-4">Usage:</a></h4>
+<ul>
+<li>Launch rqt_tf_tree from the terminal:</li>
+</ul>
+<pre><code class="language-bash">rqt_tf_tree
+</code></pre>
+<ul>
+<li>View the hierarchical relationship between frames.</li>
+</ul>
+<h4 id="features-4"><a class="header" href="#features-4">Features:</a></h4>
+<ul>
+<li>Dynamic updates as the TF tree changes.</li>
+<li>Useful for understanding the spatial relationships in robotic systems.</li>
+</ul>
+<h3 id="conclusion"><a class="header" href="#conclusion">Conclusion</a></h3>
+<p>RQT enhances the ROS experience by bringing the convenience and efficiency of GUIs to the robotics development workflow. By utilizing the Qt framework, RQT offers a powerful and flexible platform for visualization, analysis, and interaction, making it an indispensable tool for developers, researchers, and operators working with ROS-enabled robots and systems. Its ability to simplify complex tasks, provide real-time feedback, and integrate seamlessly with other ROS components underscores its importance in the field of robotics.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../../GSWR2/ros2_comm_proto/ros2_comm_proto.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../GSWR2/ros2_RQT_visualisation_CLI_tools/ros2_RQT_visualisation_CLI_tools.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="../../GSWR2/ros2_comm_proto/ros2_topics.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../../GSWR2/ros2_RQT_visualisation_CLI_tools/2_CLI_tool.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -303,11 +359,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../../GSWR2/ros2_comm_proto/ros2_comm_proto.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../GSWR2/ros2_RQT_visualisation_CLI_tools/ros2_RQT_visualisation_CLI_tools.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../../GSWR2/ros2_comm_proto/ros2_topics.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../../GSWR2/ros2_RQT_visualisation_CLI_tools/2_CLI_tool.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

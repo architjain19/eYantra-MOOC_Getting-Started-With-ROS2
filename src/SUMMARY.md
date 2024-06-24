@@ -20,6 +20,11 @@
     - [1. Introduction to ROS2 Communication Protocols](GSWR2/ros2_comm_proto/intro_to_comm_proto.md)
     - [2. ROS2 Topics](GSWR2/ros2_comm_proto/ros2_topics.md)
 
+
+  - [ros2 RQT visualisation CLI tools](GSWR2/ros2_RQT_visualisation_CLI_tools/ros2_RQT_visualisation_CLI_tools.md)
+    - [1. RQT visualisation](GSWR2/ros2_RQT_visualisation_CLI_tools/1_RQT_visualisation.md)
+    - [2. CLI Tools](GSWR2/ros2_RQT_visualisation_CLI_tools/2_CLI_tool.md)
+
   - [Overview Of Turtlesim](GSWR2/ros2_overview_of_turtlesim/ros2_overview_of_turtlesim.md)
     - [Key Components](GSWR2/ros2_overview_of_turtlesim/1_key_components.md)
     - [Turtle Simulator](GSWR2/ros2_overview_of_turtlesim/2_turtle_simulator.md)
