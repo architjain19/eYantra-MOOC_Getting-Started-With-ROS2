@@ -21,6 +21,12 @@
     - [2. ROS2 Topics](GSWR2/ros2_comm_proto/ros2_topics.md)
 
 
+  - [Launch files and running ROS nodes](GSWR2/ros2_launch_files_running_ros_nodes/ros2_launch_files_running_ros_nodes.md)
+    - [1. ROS Nodes](GSWR2/ros2_launch_files_running_ros_nodes/1_ros_nodes.md)
+      - [1.1. Writing a simple publisher and subscriber](GSWR2/ros2_launch_files_running_ros_nodes/1_1_pub_sub.md)
+    - [2. Launch files](GSWR2/ros2_launch_files_running_ros_nodes/2_launch_files.md)
+    - [Creating Launch File for Publisher and Subscriber node](GSWR2/ros2_launch_files_running_ros_nodes/2_1_launchfile_pubsub.md)
+
   - [ros2 RQT visualisation CLI tools](GSWR2/ros2_RQT_visualisation_CLI_tools/ros2_RQT_visualisation_CLI_tools.md)
     - [1. RQT visualisation](GSWR2/ros2_RQT_visualisation_CLI_tools/1_RQT_visualisation.md)
     - [2. CLI Tools](GSWR2/ros2_RQT_visualisation_CLI_tools/2_CLI_tool.md)
