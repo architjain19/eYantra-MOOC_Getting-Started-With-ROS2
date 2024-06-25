@@ -83,22 +83,22 @@ This MOOC is structured to take you from the basics to a competent level of ROS2
 >   - ROS CLI commands for topics, services, actions
 >   - Examples of ROS2 topics, services, actions
 > 
-> - **<u>Overview of ROS2 nodes:</u>**
+> - **[Overview of ROS2 nodes:](ros2_overview_nodes/ros2_overview_nodes.md)**
 > 	- Understanding talker and listener Nodes
 > 	- How to write publisher-subscriber nodes in ROS2 (Python and C++)
 > 
-> - **<u>Launch files and running ROS nodes:</u>**
+> - **[Launch files and running ROS nodes:](ros2_launch_files_running_ros_nodes/ros2_launch_files_running_ros_nodes.md)**
 > 	- Components in ROS2 launch file
 > 	- How to run ROS nodes using launch files
 > 	- CLI commands to launch files and run ROS nodes
 > 
-> - **<u>Getting started with RQT visualisation and CLI tools in ROS2:</u>**
+> - **[Getting started with RQT visualisation and CLI tools in ROS2:](ros2_RQT_visualisation_CLI_tools/ros2_RQT_visualisation_CLI_tools.md)**
 > 	- ros2 topic/service/action list, info, pub
 > 	- ros2 run/launch nodes
 > 	- RQT graph visualisation
 > 	- ros2 msg list, info, interface, etc
 > 
-> - **<u>Overview of Turtlesim:</u>**
+> - **[Overview of Turtlesim:](ros2_overview_of_turtlesim/ros2_overview_of_turtlesim.md)**
 > 	- CLI operation of turtlesim robot
 > 	- Create patterns using turtlesim by developing your custom ROS2 nodes
 > 
