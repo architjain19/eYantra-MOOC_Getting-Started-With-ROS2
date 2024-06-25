@@ -16,6 +16,7 @@
   - [ROS2 Communication Protocols](GSWR2/ros2_comm_proto/ros2_comm_proto.md)
     - [1. Introduction to ROS2 Communication Protocols](GSWR2/ros2_comm_proto/intro_to_comm_proto.md)
     - [2. ROS2 Topics](GSWR2/ros2_comm_proto/ros2_topics.md)
+    - [3. ROS2 Services](GSWR2/ros2_comm_proto/ros2_services.md)
 
 <!-- - [Remove This](Task_0/task_0.md)
   - [Task 0](Task_0/task_0.md)
