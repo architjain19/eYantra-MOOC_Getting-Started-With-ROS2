@@ -48,7 +48,7 @@
 >    - **ROS CLI Commands**
 >      - Using `ros2 service` commands to list, call, and find services.
 
-#### 4. ROS2 Actions
+#### [4. ROS2 Actions](ros2_actions.md)
 >    - **Concept and Functionality**
 >      - What are ROS2 Actions?
 >      - Differences and use cases compared to Topics and Services.
@@ -57,21 +57,15 @@
 >    - **ROS CLI Commands**
 >      - Using `ros2 action` commands to list, send goals, and get results.
 
-#### 5. Comparing Topics, Services, and Actions
+#### [5. Comparing Topics, Services, and Actions](ros2_comm_compare.md)
 >    - **Use Case Scenarios**
 >      - When to use Topics, Services, or Actions.
 >      - Comparative analysis based on latency, reliability, and complexity.
 
-#### 6. Hands-on Project
+#### [6. Hands-on Project](ros2_comm_proj.md)
 >    - **Integrative Example**
 >      - A comprehensive project combining Topics, Services, and Actions.
 >      - Real-world application to reinforce learning.
-
-#### 7. Conclusion and Further Learning
->    - **Recap**
->      - Summary of key points covered in the module.
->    - **Next Steps**
->      - Additional resources and advanced topics for further exploration.
 
 </br>
 
