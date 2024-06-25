@@ -1,0 +1,291 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js navy">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Key Components - e-Yantra Robotics Competition - ROS2 MOOC</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- 
+        <link rel="icon" href="../../favicon.svg">
+         -->
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../../style.css">
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = "navy";
+            <!-- window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "navy"; -->
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('navy')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../../welcome.html">Welcome to ROS2 MOOC !</a></li><li class="chapter-item affix "><li class="spacer"></li><li class="chapter-item expanded "><a href="../../GSWR2/GSWR2_welcome.html">Getting Started With ROS2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../GSWR2/introduction_installation/intro_install.html">Introduction and Installation Setup</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../GSWR2/introduction_installation/humble_installation.html">ROS2 Humble Installation</a></li></ol></li><li class="chapter-item "><a href="../../GSWR2/ros2_design_concepts/ros2_design_concepts.html">ROS2 Design concepts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../GSWR2/ros2_design_concepts/history_of_ros.html">1. History of ROS</a></li><li class="chapter-item "><a href="../../GSWR2/ros2_design_concepts/diff_ros_1_and_2.html">2. Differences between ROS1 and ROS2</a></li><li class="chapter-item "><a href="../../GSWR2/ros2_design_concepts/dds.html">3. Data Distribution Service (DDS)</a></li><li class="chapter-item "><a href="../../GSWR2/ros2_design_concepts/design_concepts.html">4. ROS2 Design Concepts</a></li></ol></li><li class="chapter-item "><a href="../../GSWR2/ros2_ecosystem_filesystem/ros2_ecosystem_filesystem.html">ROS2 Ecosystem and Filesystem</a></li><li class="chapter-item "><a href="../../GSWR2/ros2_comm_proto/ros2_comm_proto.html">ROS2 Communication Protocols</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../GSWR2/ros2_comm_proto/intro_to_comm_proto.html">1. Introduction to ROS2 Communication Protocols</a></li><li class="chapter-item "><a href="../../GSWR2/ros2_comm_proto/ros2_topics.html">2. ROS2 Topics</a></li></ol></li><li class="chapter-item "><a href="../../GSWR2/ros2_overview_nodes/ros2_overview_nodes.html">ROS Nodes</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../GSWR2/ros2_overview_nodes/1_ros_nodes.html">1. Key Concepts of ROS 2 Nodes</a></li><li class="chapter-item "><a href="../../GSWR2/ros2_overview_nodes/1_1_pub_sub.html">2. Writing a simple publisher and subscriber node</a></li></ol></li><li class="chapter-item "><a href="../../GSWR2/ros2_launch_files_running_ros_nodes/ros2_launch_files_running_ros_nodes.html">Launch files and running ROS nodes</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../GSWR2/ros2_launch_files_running_ros_nodes/2_launch_files.html">Key Components of Launch Files</a></li><li class="chapter-item "><a href="../../GSWR2/ros2_launch_files_running_ros_nodes/2_1_launchfile_pubsub.html">Creating Launch File for Publisher and Subscriber node</a></li></ol></li><li class="chapter-item "><a href="../../GSWR2/ros2_RQT_visualisation_CLI_tools/ros2_RQT_visualisation_CLI_tools.html">ros2 RQT visualisation CLI tools</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../GSWR2/ros2_RQT_visualisation_CLI_tools/1_RQT_visualisation.html">1. RQT visualisation</a></li><li class="chapter-item "><a href="../../GSWR2/ros2_RQT_visualisation_CLI_tools/2_CLI_tool.html">2. CLI Tools</a></li></ol></li><li class="chapter-item expanded "><a href="../../GSWR2/ros2_overview_of_turtlesim/ros2_overview_of_turtlesim.html">Overview Of Turtlesim</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../GSWR2/ros2_overview_of_turtlesim/1_key_components.html" class="active">Key Components</a></li><li class="chapter-item "><a href="../../GSWR2/ros2_overview_of_turtlesim/2_turtle_simulator.html">Turtle Simulator</a></li><li class="chapter-item "><a href="../../GSWR2/ros2_overview_of_turtlesim/3_creating_second_turtle.html">Creating a Second Turtle</a></li><li class="chapter-item "><a href="../../GSWR2/ros2_overview_of_turtlesim/4_controlling_2D_turtle_twist_messages.html">Controlling a 2D Turtle with Twist Messages</a></li></ol></li></ol></li><li class="chapter-item "><div>Bonus Blogs!</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../bonus_blogs/git_github.html">Git and GitHub</a></li><li class="chapter-item "><a href="../../bonus_blogs/github_challenge.html">Github Challenge</a></li><li class="chapter-item "><a href="../../bonus_blogs/coding_std.html">Coding Standards</a></li></ol></li><li class="chapter-item "><li class="spacer"></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <!-- <html>
+ 	<head>
+ 	<style>
+ 		
+ 	@media only screen and (max-width: 600px) {
+ 	  .eyrc_ckt{
+ 			display:none;
+ 		}
+ 	}
+ 
+ 	</style>
+ 	</head>
+ 	<body>
+ 		<div>
+ 		<center></center>
+ 			<div style="display:flex; justify-content:space-between;padding:10px;padding-top:0">
+ 				<div >
+ 					<img src="https://www.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" height="40px" style="padding:10px 15px;" />
+ 				</div>
+ 				<div>
+ 					<img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/maze_bot/assets/eyrc-header.svg" height="80px"  class="eyrc_ckt">
+ 				</div>
+ 				<div style="font-weight:900;font-size:20px;text-align:center;padding:10px 15px">
+ 					e-Yantra<br>
+ 					Robotics Competition
+ 				</div>
+ 			</div>
+ 			
+ 		</div>
+ 	</body>
+ </html>
+ 
+ 
+ -->
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar autohide sticky bordered">
+                    <div style="width:100%">
+                        <html>
+                        	<head>
+                        	<style>
+                        		
+                        	@media only screen and (max-width: 600px) {
+                        	  .eyrc_ckt{
+                        			display:none;
+                        		}
+                        	}
+                        
+                        	</style>
+                        	</head>
+                        	<body>
+                        		<div>
+                        		<center></center>
+                        			<div style="display:flex; justify-content:space-between;padding:10px;padding-top:0">
+                        				<div >
+                        					<img src="https://www.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" height="40px" style="padding:10px 15px;" />
+                        				</div>
+                        				<div>
+                        					<img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/maze_bot/assets/eyrc-header.svg" height="80px"  class="eyrc_ckt">
+                        				</div>
+                        				<div style="font-weight:900;font-size:20px;text-align:center;padding:10px 15px">
+                        					e-Yantra<br>
+                        					Robotics Competition
+                        				</div>
+                        			</div>
+                        			
+                        		</div>
+                        	</body>
+                        </html>
+                        
+                        
+                    </div>
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="space">Space</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">e-Yantra Robotics Competition - ROS2 MOOC</h1>
+
+                    <div class="right-buttons">
+                        <div id="navigation-buttons" type="button" onclick=" window.open('https://portal.e-yantra.org/profile_home', '_blank')">Home</div>
+                        <div id="navigation-buttons" type="button" onclick=" window.open('https://discuss.e-yantra.org/', '_blank')">Forum</div>
+                        <div id="navigation-buttons" type="button" onclick=" window.open('https://portal.e-yantra.org/logout', '_blank')">Logout</div>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="key-components"><a class="header" href="#key-components">Key Components</a></h2>
+<h3 id="1-turtle"><a class="header" href="#1-turtle">1. Turtle</a></h3>
+<p>The primary entity in the Turtlesim simulation, represented by a graphic of a turtle moving in a 2D space.</p>
+<h3 id="2-nodes"><a class="header" href="#2-nodes">2. Nodes</a></h3>
+<p>Nodes are the basic execution units in ROS that perform computations. In Turtlesim, the key nodes are:</p>
+<ul>
+<li><strong>Turtlesim Node</strong>: Responsible for the graphical simulation of the turtle. It subscribes to topics to receive movement commands and publishes the turtle's current state.</li>
+<li><strong>Teleoperation Node (turtle_teleop_key)</strong>: Allows you to control the turtle using keyboard inputs. It publishes velocity commands to the <code>/turtle1/cmd_vel</code> topic.</li>
+</ul>
+<h3 id="3-topics"><a class="header" href="#3-topics">3. Topics</a></h3>
+<p>Topics are named buses over which nodes exchange messages asynchronously. Key topics in Turtlesim are:</p>
+<ul>
+<li><strong>/turtle1/cmd_vel</strong>: A topic of type <code>geometry_msgs/Twist</code>. Nodes publish velocity commands here to control the turtle's movement.</li>
+<li><strong>/turtle1/pose</strong>: A topic of type <code>turtlesim/Pose</code>. This topic publishes the turtle’s current position and orientation.</li>
+</ul>
+<h3 id="4-services"><a class="header" href="#4-services">4. Services</a></h3>
+<p>Services in ROS provide a way for nodes to perform synchronous request/reply interactions. Key services in Turtlesim are:</p>
+<ul>
+<li><strong>/reset</strong>: Resets the turtle's position to the center of the screen.</li>
+<li><strong>/turtle1/set_pen</strong>: Changes the color and width of the turtle's pen, accepting parameters for red, green, blue values, pen width, and whether to turn the pen on or off.</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../GSWR2/ros2_overview_of_turtlesim/ros2_overview_of_turtlesim.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../../GSWR2/ros2_overview_of_turtlesim/2_turtle_simulator.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../GSWR2/ros2_overview_of_turtlesim/ros2_overview_of_turtlesim.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../../GSWR2/ros2_overview_of_turtlesim/2_turtle_simulator.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../../sidebar.js"></script>
+
+
+    </body>
+</html>
