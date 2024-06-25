@@ -33,6 +33,9 @@ ros2 run turtlesim turtle_teleop_key
 Using your keyboard, you can now control the turtle's movement.
 <img src="resources/teleop.png" />
 
+<img src="resources/teleop.gif" width="800" height="400" />
+
+
 ### List Nodes, Topics, and Services
 You can see the nodes, and their associated topics, services, and actions, using the list subcommands of the respective commands:
 
@@ -42,4 +45,5 @@ ros2 topic list
 ros2 service list
 ros2 action list
 ```
+<img src="resources/list.png" />
 
