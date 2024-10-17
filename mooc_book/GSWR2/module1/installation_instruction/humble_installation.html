@@ -1,0 +1,403 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js navy">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>ROS2 Humble Installation - e-Yantra Robotics Competition - ROS2 MOOC</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- 
+        <link rel="icon" href="../../../favicon.svg">
+         -->
+        <link rel="shortcut icon" href="../../../favicon.png">
+        <link rel="stylesheet" href="../../../css/variables.css">
+        <link rel="stylesheet" href="../../../css/general.css">
+        <link rel="stylesheet" href="../../../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../../highlight.css">
+        <link rel="stylesheet" href="../../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../../../style.css">
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../../";
+            var default_theme = "navy";
+            <!-- window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "navy"; -->
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('navy')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../../../welcome.html">Welcome to ROS2 MOOC !</a></li><li class="chapter-item affix "><li class="spacer"></li><li class="chapter-item expanded "><a href="../../../GSWR2/GSWR2_welcome.html">Getting Started With ROS2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../GSWR2/module1/installation_instruction/intro_install.html">Module 1</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../GSWR2/module1/installation_instruction/intro_install.html">Introduction and Installation Setup</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../GSWR2/module1/installation_instruction/humble_installation.html" class="active">ROS2 Humble Installation</a></li></ol></li><li class="chapter-item "><a href="../../../GSWR2/module1/ros2_design_concepts/ros2_design_concepts.html">ROS2 Design concepts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../GSWR2/module1/ros2_design_concepts/history_of_ros.html">1. History of ROS</a></li><li class="chapter-item "><a href="../../../GSWR2/module1/ros2_design_concepts/diff_ros_1_and_2.html">2. Differences between ROS1 and ROS2</a></li><li class="chapter-item "><a href="../../../GSWR2/module1/ros2_design_concepts/dds.html">3. Data Distribution Service (DDS)</a></li><li class="chapter-item "><a href="../../../GSWR2/module1/ros2_design_concepts/design_concepts.html">4. ROS2 Design Concepts</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../../GSWR2/module2/ros2_ecosystem_filesystem/ros2_ecosystem_filesystem.html">Module 2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../GSWR2/module2/ros2_ecosystem_filesystem/ros2_ecosystem_filesystem.html">ROS2 Ecosystem and Filesystem</a></li><li class="chapter-item "><a href="../../../GSWR2/module2/key_concepts/key_concepts_of_ros2.html">ROS Key Concepts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../GSWR2/module2/key_concepts/nodes.html">Nodes</a></li><li class="chapter-item "><a href="../../../GSWR2/module2/key_concepts/topics.html">Topics</a></li><li class="chapter-item "><a href="../../../GSWR2/module2/key_concepts/messages.html">Messages</a></li></ol></li><li class="chapter-item "><a href="../../../GSWR2/module2/task/task1.html">Task 1</a></li><li class="chapter-item "><a href="../../../GSWR2/module2/communication_protocols_part1/intro.html">ROS2 Communication Protocols Part 1</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../GSWR2/module2/communication_protocols_part1/ros2_communication_overview.html">1.Introduction to ROS2 Communication Protocols</a></li><li class="chapter-item "><a href="../../../GSWR2/module2/communication_protocols_part1/ros2_topics.html">2. ROS2 Topics</a></li></ol></li><li class="chapter-item "><a href="../../../GSWR2/module2/turtlesim_part1/turtlesim_part1.html">Overview Of Turtlesim</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../GSWR2/module2/turtlesim_part1/1_key_components.html">1. Key Components</a></li><li class="chapter-item "><a href="../../../GSWR2/module2/turtlesim_part1/2_turtle_simulator.html">2. Turtle Simulator</a></li></ol></li><li class="chapter-item "><a href="../../../GSWR2/module2/task/task2.html">Task 2</a></li></ol></li><li class="chapter-item "><a href="../../../GSWR2/module3/ros2_launch_files_running_ros_nodes/ros2_launch_files_running_ros_nodes.html">Module 3</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../GSWR2/module3/ros2_launch_files_running_ros_nodes/ros2_launch_files_running_ros_nodes.html">Launch files and running ROS nodes</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../GSWR2/module3/ros2_launch_files_running_ros_nodes/2_launch_files.html">1. Key Components of Launch Files</a></li><li class="chapter-item "><a href="../../../GSWR2/module3/ros2_launch_files_running_ros_nodes/2_1_launchfile_pubsub.html">2. Creating Launch File for Publisher and Subscriber node</a></li></ol></li><li class="chapter-item "><a href="../../../GSWR2/module3/ros2_RQT_visualisation_CLI_tools/ros2_RQT_visualisation_CLI_tools.html">ROS2 RQT visualisation CLI tools</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../GSWR2/module3/ros2_RQT_visualisation_CLI_tools/1_RQT_visualisation.html">1. RQT visualisation</a></li><li class="chapter-item "><a href="../../../GSWR2/module3/ros2_RQT_visualisation_CLI_tools/2_CLI_tool.html">2. CLI Tools</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../../GSWR2/module4/communication_protocols_part2/ros2_comm_proto.html">Module 4</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../GSWR2/module4/communication_protocols_part2/ros2_services.html">1. service client</a></li><li class="chapter-item "><a href="../../../GSWR2/module4/communication_protocols_part2/ros2_actions.html">2. action</a></li><li class="chapter-item "><a href="../../../GSWR2/module4/communication_protocols_part2/ros2_comm_compare.html">3. Comparing Topics, Services, and Actions</a></li></ol></li><li class="chapter-item "><a href="../../../GSWR2/module3/ros2_launch_files_running_ros_nodes/ros2_launch_files_running_ros_nodes.html">Module 5</a></li></ol></li><li class="chapter-item "><li class="spacer"></li><li class="chapter-item "><div>Bonus Blogs!</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../bonus_blogs/git_github.html">Git and GitHub</a></li><li class="chapter-item "><a href="../../../bonus_blogs/github_challenge.html">Github Challenge</a></li><li class="chapter-item "><a href="../../../bonus_blogs/coding_std.html">Coding Standards</a></li></ol></li><li class="chapter-item "><li class="spacer"></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <!-- <html>
+ 	<head>
+ 	<style>
+ 		
+ 	@media only screen and (max-width: 600px) {
+ 	  .eyrc_ckt{
+ 			display:none;
+ 		}
+ 	}
+ 
+ 	</style>
+ 	</head>
+ 	<body>
+ 		<div>
+ 		<center></center>
+ 			<div style="display:flex; justify-content:space-between;padding:10px;padding-top:0">
+ 				<div >
+ 					<img src="https://www.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" height="40px" style="padding:10px 15px;" />
+ 				</div>
+ 				<div>
+ 					<img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/maze_bot/assets/eyrc-header.svg" height="80px"  class="eyrc_ckt">
+ 				</div>
+ 				<div style="font-weight:900;font-size:20px;text-align:center;padding:10px 15px">
+ 					e-Yantra<br>
+ 					Robotics Competition
+ 				</div>
+ 			</div>
+ 			
+ 		</div>
+ 	</body>
+ </html>
+ 
+ 
+ -->
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar autohide sticky bordered">
+                    <div style="width:100%">
+                        <html>
+                        	<head>
+                        	<style>
+                        		
+                        	@media only screen and (max-width: 600px) {
+                        	  .eyrc_ckt{
+                        			display:none;
+                        		}
+                        	}
+                        
+                        	</style>
+                        	</head>
+                        	<body>
+                        		<div>
+                        		<center></center>
+                        			<div style="display:flex; justify-content:space-between;padding:10px;padding-top:0">
+                        				<div >
+                        					<img src="https://www.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" height="40px" style="padding:10px 15px;" />
+                        				</div>
+                        				<div>
+                        					<img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/maze_bot/assets/eyrc-header.svg" height="80px"  class="eyrc_ckt">
+                        				</div>
+                        				<div style="font-weight:900;font-size:20px;text-align:center;padding:10px 15px">
+                        					e-Yantra<br>
+                        					Robotics Competition
+                        				</div>
+                        			</div>
+                        			
+                        		</div>
+                        	</body>
+                        </html>
+                        
+                        
+                    </div>
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="space">Space</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">e-Yantra Robotics Competition - ROS2 MOOC</h1>
+
+                    <div class="right-buttons">
+                        <div id="navigation-buttons" type="button" onclick=" window.open('https://portal.e-yantra.org/profile_home', '_blank')">Home</div>
+                        <div id="navigation-buttons" type="button" onclick=" window.open('https://discuss.e-yantra.org/', '_blank')">Forum</div>
+                        <div id="navigation-buttons" type="button" onclick=" window.open('https://portal.e-yantra.org/logout', '_blank')">Logout</div>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!-- <center><img src="http://mooc.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" style="scale:75%;" /></center> -->
+<style>
+.back{
+	position: fixed;
+	width: 250px;
+	height: 250px;
+	top: 50%;
+	left: 50%;
+    margin-top: auto; 
+    margin-left: auto; 
+	opacity: 0.15;
+    z-index: -1;
+	}
+</style>
+<!-- <img src="http://mooc.e-yantra.org/img/EyantraLogoMini.png" class="back"> -->
+<center>
+    <h1 id="ros-2-humble-installation-guide"><a class="header" href="#ros-2-humble-installation-guide">ROS 2 Humble Installation Guide</a></h1>
+</center>
+<hr />
+</br>
+<blockquote>
+<ul>
+<li>
+<p><em><strong>This Document assumes that the reader has installed Ubuntu 22.04. However, if you haven’t installed Ubuntu 22.04 yet make sure to install it before proceeding.</strong></em></p>
+</li>
+<li>
+<p><em><strong>Please practise and execute all the content related to this course in Ubuntu 22.04 only. Developers of this course have tested all the provided material/packages only on the mentioned Operating system.</strong></em></p>
+</li>
+<li>
+<p><em><strong>e-Yantra won’t be able to help solve queries related to any other Operating System.</strong></em></p>
+</li>
+</ul>
+</blockquote>
+<h2 id="installation-instructions"><a class="header" href="#installation-instructions">Installation Instructions</a></h2>
+<p><em>ROS (Robot Operating System) provides libraries and tools to help software developers create robot applications. It provides hardware abstraction, device drivers, libraries, visualisers, message-passing, package management, and more. ROS is licensed under an open source, BSD license.</em></p>
+<p><em><strong>(You can refer to the <a href="https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html">official installation guide</a> from ROS documentation.)</strong></em></p>
+<blockquote>
+<p>Here the <a href="https://docs.ros.org/en/rolling/Releases.html">distribution</a> compatible with Ubuntu 22.04 is the <a href="http://docs.ros.org/en/humble/">ROS Humble Hawksbill</a>. Follow the steps below to install it.</p>
+</blockquote>
+<h3 id="installation-steps"><a class="header" href="#installation-steps">&gt; Installation Steps</a></h3>
+<blockquote>
+<p><strong>1. Set locale:</strong> Make sure you have a locale which supports “UTF-8”. For this try the following commands</p>
+</blockquote>
+<pre><code>locale  # check for UTF-8
+
+sudo apt update &amp;&amp; sudo apt install locales
+sudo locale-gen en_US en_US.UTF-8
+sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+locale  # verify settings
+</code></pre>
+<blockquote>
+<p><strong>2. Setup Sources:</strong> You will need to add the ROS 2 apt repository to your system. <em>(More about <strong>curl</strong> <a href="https://curl.se/">here</a>)</em></p>
+</blockquote>
+<ul>
+<li>First ensure that the <a href="https://help.ubuntu.com/community/Repositories/Ubuntu">Ubuntu Universe repository</a> is enabled.
+<pre><code>sudo apt install software-properties-common
+sudo add-apt-repository universe
+</code></pre>
+</li>
+<li>Now add the ROS 2 GPG key with apt.
+<pre><code>sudo apt update &amp;&amp; sudo apt install curl -y
+sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+</code></pre>
+</li>
+<li>Then add the repository to your sources list.
+<pre><code>echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release &amp;&amp; echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list &gt; /dev/null
+</code></pre>
+</li>
+</ul>
+<blockquote>
+<p><strong>3. Install ROS 2 packages:</strong></p>
+</blockquote>
+<ul>
+<li>Update your apt repository caches after setting up the repositories.
+<pre><code>sudo apt update
+</code></pre>
+</li>
+<li>ROS 2 packages are built on frequently updated Ubuntu systems. It is always recommended that you ensure your system is up to date before installing new packages.
+<pre><code>sudo apt upgrade
+</code></pre>
+</li>
+<li><em><strong>Desktop Install (Recommended):</strong></em> ROS, RViz, demos, tutorials.
+<em>(Make sure you install <strong>Desktop</strong> and not <em>ROS-Base</em> or <em>Development tools</em>, as we will be using <em>RViz</em> and other softwares/packages which come pre-installed in Desktop installation.)</em>
+<pre><code>sudo apt install ros-humble-desktop
+</code></pre>
+</li>
+</ul>
+<blockquote>
+<p><strong>4. Environment Setup:</strong></p>
+</blockquote>
+<ul>
+<li>Set up your environment by sourcing the following file.
+<pre><code>source /opt/ros/humble/setup.bash
+</code></pre>
+</li>
+<li>To Automatically add ROS environment variables to your bash session every time a new shell terminal/bash is launched, enter the following command. <em>(Find more about bash <a href="https://www.gnu.org/software/bash/manual/html_node/What-is-Bash_003f.html">here</a>)</em>
+<pre><code>echo "source /opt/ros/humble/setup.bash" &gt;&gt; ~/.bashrc
+</code></pre>
+</li>
+<li>Sourcing bashrc ensures to use updated bashrc using the following command, <em>or</em> it can be done by closing all terminals and re-opening a new terminal.
+<pre><code>source ~/.bashrc
+</code></pre>
+</li>
+</ul>
+<h3 id="check-installation"><a class="header" href="#check-installation">Check installation</a></h3>
+<p>Run the below command on a new terminal after performing all the steps above, this will ensure that the ROS installed on your system is working fine.</p>
+<p>In one terminal, source the setup file and then run a C++ <em><strong>talker</strong></em>:</p>
+<pre><code>ros2 run demo_nodes_cpp talker
+</code></pre>
+<p>In another terminal source the setup file and then run a Python <em><strong>listener</strong></em>:</p>
+<pre><code>ros2 run demo_nodes_py listener
+</code></pre>
+<p>You should see the <em><strong>talker</strong></em> saying that it’s <em><strong>publishing</strong></em> messages and the <em><strong>listener</strong></em> saying <em><strong>I heard</strong></em> those messages. This verifies both the <em>C++</em> and <em>Python APIs</em> are working properly. Check the image below for reference.</p>
+<img style="margin-top: 10px;" height="250px" src="resources/ros2_test.png">
+<p>Check typing <code>rviz2</code> in a new terminal to launch RViz. You should see the RViz window as shown below.</p>
+<img style="margin-top: 10px;" height="550px" src="resources/rviz2.png">
+</br>
+<blockquote>
+<p><em><strong>Hooray! This confirms that ROS2 Humble has been installed successfully in your system and is running perfectly.</strong></em></p>
+</blockquote>
+<h3 id="references"><a class="header" href="#references">References</a></h3>
+<ul>
+<li>
+<p><a href="https://docs.ros.org/en/humble/index.html">Official ROS2 Humble Documentation</a></p>
+</li>
+<li>
+<p><a href="https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html">ROS Humble Installation Instructions for Ubuntu</a></p>
+</li>
+</ul>
+</br>
+<hr />
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../../GSWR2/module1/installation_instruction/intro_install.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../../../GSWR2/module1/ros2_design_concepts/ros2_design_concepts.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../../GSWR2/module1/installation_instruction/intro_install.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../../../GSWR2/module1/ros2_design_concepts/ros2_design_concepts.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../../../sidebar.js"></script>
+
+
+    </body>
+</html>

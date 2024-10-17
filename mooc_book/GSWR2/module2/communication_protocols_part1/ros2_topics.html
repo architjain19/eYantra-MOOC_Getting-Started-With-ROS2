@@ -1,0 +1,459 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js navy">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>2. ROS2 Topics - e-Yantra Robotics Competition - ROS2 MOOC</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- 
+        <link rel="icon" href="../../../favicon.svg">
+         -->
+        <link rel="shortcut icon" href="../../../favicon.png">
+        <link rel="stylesheet" href="../../../css/variables.css">
+        <link rel="stylesheet" href="../../../css/general.css">
+        <link rel="stylesheet" href="../../../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../../highlight.css">
+        <link rel="stylesheet" href="../../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../../../style.css">
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../../";
+            var default_theme = "navy";
+            <!-- window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "navy"; -->
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('navy')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../../../welcome.html">Welcome to ROS2 MOOC !</a></li><li class="chapter-item affix "><li class="spacer"></li><li class="chapter-item expanded "><a href="../../../GSWR2/GSWR2_welcome.html">Getting Started With ROS2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../GSWR2/module1/installation_instruction/intro_install.html">Module 1</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../GSWR2/module1/installation_instruction/intro_install.html">Introduction and Installation Setup</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../GSWR2/module1/installation_instruction/humble_installation.html">ROS2 Humble Installation</a></li></ol></li><li class="chapter-item "><a href="../../../GSWR2/module1/ros2_design_concepts/ros2_design_concepts.html">ROS2 Design concepts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../GSWR2/module1/ros2_design_concepts/history_of_ros.html">1. History of ROS</a></li><li class="chapter-item "><a href="../../../GSWR2/module1/ros2_design_concepts/diff_ros_1_and_2.html">2. Differences between ROS1 and ROS2</a></li><li class="chapter-item "><a href="../../../GSWR2/module1/ros2_design_concepts/dds.html">3. Data Distribution Service (DDS)</a></li><li class="chapter-item "><a href="../../../GSWR2/module1/ros2_design_concepts/design_concepts.html">4. ROS2 Design Concepts</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../../GSWR2/module2/ros2_ecosystem_filesystem/ros2_ecosystem_filesystem.html">Module 2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../GSWR2/module2/ros2_ecosystem_filesystem/ros2_ecosystem_filesystem.html">ROS2 Ecosystem and Filesystem</a></li><li class="chapter-item "><a href="../../../GSWR2/module2/key_concepts/key_concepts_of_ros2.html">ROS Key Concepts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../GSWR2/module2/key_concepts/nodes.html">Nodes</a></li><li class="chapter-item "><a href="../../../GSWR2/module2/key_concepts/topics.html">Topics</a></li><li class="chapter-item "><a href="../../../GSWR2/module2/key_concepts/messages.html">Messages</a></li></ol></li><li class="chapter-item "><a href="../../../GSWR2/module2/task/task1.html">Task 1</a></li><li class="chapter-item expanded "><a href="../../../GSWR2/module2/communication_protocols_part1/intro.html">ROS2 Communication Protocols Part 1</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../GSWR2/module2/communication_protocols_part1/ros2_communication_overview.html">1.Introduction to ROS2 Communication Protocols</a></li><li class="chapter-item expanded "><a href="../../../GSWR2/module2/communication_protocols_part1/ros2_topics.html" class="active">2. ROS2 Topics</a></li></ol></li><li class="chapter-item "><a href="../../../GSWR2/module2/turtlesim_part1/turtlesim_part1.html">Overview Of Turtlesim</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../GSWR2/module2/turtlesim_part1/1_key_components.html">1. Key Components</a></li><li class="chapter-item "><a href="../../../GSWR2/module2/turtlesim_part1/2_turtle_simulator.html">2. Turtle Simulator</a></li></ol></li><li class="chapter-item "><a href="../../../GSWR2/module2/task/task2.html">Task 2</a></li></ol></li><li class="chapter-item "><a href="../../../GSWR2/module3/ros2_launch_files_running_ros_nodes/ros2_launch_files_running_ros_nodes.html">Module 3</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../GSWR2/module3/ros2_launch_files_running_ros_nodes/ros2_launch_files_running_ros_nodes.html">Launch files and running ROS nodes</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../GSWR2/module3/ros2_launch_files_running_ros_nodes/2_launch_files.html">1. Key Components of Launch Files</a></li><li class="chapter-item "><a href="../../../GSWR2/module3/ros2_launch_files_running_ros_nodes/2_1_launchfile_pubsub.html">2. Creating Launch File for Publisher and Subscriber node</a></li></ol></li><li class="chapter-item "><a href="../../../GSWR2/module3/ros2_RQT_visualisation_CLI_tools/ros2_RQT_visualisation_CLI_tools.html">ROS2 RQT visualisation CLI tools</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../GSWR2/module3/ros2_RQT_visualisation_CLI_tools/1_RQT_visualisation.html">1. RQT visualisation</a></li><li class="chapter-item "><a href="../../../GSWR2/module3/ros2_RQT_visualisation_CLI_tools/2_CLI_tool.html">2. CLI Tools</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../../GSWR2/module4/communication_protocols_part2/ros2_comm_proto.html">Module 4</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../GSWR2/module4/communication_protocols_part2/ros2_services.html">1. service client</a></li><li class="chapter-item "><a href="../../../GSWR2/module4/communication_protocols_part2/ros2_actions.html">2. action</a></li><li class="chapter-item "><a href="../../../GSWR2/module4/communication_protocols_part2/ros2_comm_compare.html">3. Comparing Topics, Services, and Actions</a></li></ol></li><li class="chapter-item "><a href="../../../GSWR2/module3/ros2_launch_files_running_ros_nodes/ros2_launch_files_running_ros_nodes.html">Module 5</a></li></ol></li><li class="chapter-item "><li class="spacer"></li><li class="chapter-item "><div>Bonus Blogs!</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../bonus_blogs/git_github.html">Git and GitHub</a></li><li class="chapter-item "><a href="../../../bonus_blogs/github_challenge.html">Github Challenge</a></li><li class="chapter-item "><a href="../../../bonus_blogs/coding_std.html">Coding Standards</a></li></ol></li><li class="chapter-item "><li class="spacer"></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <!-- <html>
+ 	<head>
+ 	<style>
+ 		
+ 	@media only screen and (max-width: 600px) {
+ 	  .eyrc_ckt{
+ 			display:none;
+ 		}
+ 	}
+ 
+ 	</style>
+ 	</head>
+ 	<body>
+ 		<div>
+ 		<center></center>
+ 			<div style="display:flex; justify-content:space-between;padding:10px;padding-top:0">
+ 				<div >
+ 					<img src="https://www.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" height="40px" style="padding:10px 15px;" />
+ 				</div>
+ 				<div>
+ 					<img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/maze_bot/assets/eyrc-header.svg" height="80px"  class="eyrc_ckt">
+ 				</div>
+ 				<div style="font-weight:900;font-size:20px;text-align:center;padding:10px 15px">
+ 					e-Yantra<br>
+ 					Robotics Competition
+ 				</div>
+ 			</div>
+ 			
+ 		</div>
+ 	</body>
+ </html>
+ 
+ 
+ -->
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar autohide sticky bordered">
+                    <div style="width:100%">
+                        <html>
+                        	<head>
+                        	<style>
+                        		
+                        	@media only screen and (max-width: 600px) {
+                        	  .eyrc_ckt{
+                        			display:none;
+                        		}
+                        	}
+                        
+                        	</style>
+                        	</head>
+                        	<body>
+                        		<div>
+                        		<center></center>
+                        			<div style="display:flex; justify-content:space-between;padding:10px;padding-top:0">
+                        				<div >
+                        					<img src="https://www.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" height="40px" style="padding:10px 15px;" />
+                        				</div>
+                        				<div>
+                        					<img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/maze_bot/assets/eyrc-header.svg" height="80px"  class="eyrc_ckt">
+                        				</div>
+                        				<div style="font-weight:900;font-size:20px;text-align:center;padding:10px 15px">
+                        					e-Yantra<br>
+                        					Robotics Competition
+                        				</div>
+                        			</div>
+                        			
+                        		</div>
+                        	</body>
+                        </html>
+                        
+                        
+                    </div>
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="space">Space</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">e-Yantra Robotics Competition - ROS2 MOOC</h1>
+
+                    <div class="right-buttons">
+                        <div id="navigation-buttons" type="button" onclick=" window.open('https://portal.e-yantra.org/profile_home', '_blank')">Home</div>
+                        <div id="navigation-buttons" type="button" onclick=" window.open('https://discuss.e-yantra.org/', '_blank')">Forum</div>
+                        <div id="navigation-buttons" type="button" onclick=" window.open('https://portal.e-yantra.org/logout', '_blank')">Logout</div>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!-- <center><img src="http://mooc.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" style="scale:75%;" /></center> -->
+<style>
+.back{
+	position: fixed;
+	width: 250px;
+	height: 250px;
+	top: 50%;
+	left: 50%;
+    margin-top: auto; 
+    margin-left: auto; 
+	opacity: 0.15;
+    z-index: -1;
+	}
+</style>
+<!-- <img src="http://mooc.e-yantra.org/img/EyantraLogoMini.png" class="back"> -->
+<center>
+    <h1 id="understanding-ros2-topics-the-lifeline-of-robot-communication"><a class="header" href="#understanding-ros2-topics-the-lifeline-of-robot-communication">Understanding ROS2 Topics: The Lifeline of Robot Communication</a></h1>
+</center>
+<hr />
+<h3 id="concept-and-functionality"><a class="header" href="#concept-and-functionality"><strong>Concept and Functionality</strong></a></h3>
+<blockquote>
+<p><em>Welcome back! Today, we’re diving into one of the most fascinating aspects of ROS2: <strong>Topics</strong>. If you’ve ever wondered how different parts of a robot share information seamlessly, you’re in for a treat. Let’s unpack the magic behind ROS2 Topics and discover how they keep robotic systems ticking.</em></p>
+</blockquote>
+<h4 id="what-are-ros2-topics"><a class="header" href="#what-are-ros2-topics"><strong>What are ROS2 Topics?</strong></a></h4>
+<blockquote>
+<p>Imagine you’re in a bustling city, and you want to send a message to a friend across town. Instead of calling or texting directly, you drop a letter into a mailbox. Your friend, who checks that mailbox, will eventually get your message. This mailbox is analogous to a <strong>topic</strong> in ROS2. It’s a shared conduit for messages between different parts of a robot.</p>
+<ul>
+<li><strong>Topics</strong>: In ROS2, topics are named buses over which nodes (the various components of your robot) can send and receive messages. Think of them as radio channels. If two nodes tune into the same channel (topic), they can communicate.</li>
+</ul>
+</blockquote>
+<h4 id="messages-publishers-and-subscribers"><a class="header" href="#messages-publishers-and-subscribers"><strong>Messages, Publishers, and Subscribers</strong></a></h4>
+<blockquote>
+<p>To understand how topics work, we need to talk about <strong>messages</strong>, <strong>publishers</strong>, and <strong>subscribers</strong>.</p>
+<ul>
+<li>
+<p><strong>Messages</strong>: These are the data packets sent over topics. They can contain anything from sensor readings to command signals. ROS2 uses predefined message types, such as <code>std_msgs/String</code> for text or <code>sensor_msgs/Image</code> for images, to ensure compatibility.</p>
+</li>
+<li>
+<p><strong>Publishers</strong>: Nodes that generate and send messages are called publishers. They create a topic and push messages to it, like a radio station broadcasting its signal.</p>
+</li>
+<li>
+<p><strong>Subscribers</strong>: Nodes that receive messages from a topic are called subscribers. They tune into a specific topic and process incoming messages, just like a radio picks up a broadcast.</p>
+</li>
+</ul>
+<p>This publish-subscribe model is powerful because it decouples data producers and consumers. A publisher doesn’t need to know who (or if anyone) is subscribing, and subscribers don’t need to know who is publishing. This makes the system incredibly flexible and scalable.</p>
+<img src="resources/Topic-SinglePubSub.gif" />
+<p><em>A node may publish data to any number of topics and simultaneously have subscriptions to any number of topics.</em></p>
+<img src="resources/Topic-MultiplePubSub.gif" />
+<p><em>Topics are one of the main ways in which data is moved between nodes and therefore between different parts of the system.</em></p>
+</blockquote>
+<hr />
+<h3 id="practical-example"><a class="header" href="#practical-example"><strong>Practical Example</strong></a></h3>
+<blockquote>
+<p>Let’s see these concepts in action with a simple example: a publisher-subscriber setup where one node sends greetings and another receives them.</p>
+</blockquote>
+<p><strong>Publisher Node (Python)</strong></p>
+<pre><code class="language-python"># The ROS 2 Python client library
+import rclpy 
+# The base class that you inherit from to create a ROS 2 node.
+from rclpy.node import Node 
+# The standard ROS message type used for publishing string data
+from std_msgs.msg import String 
+
+class SimplePublisher(Node):
+    def __init__(self):
+        super().__init__('simple_publisher')
+
+        # Creates a publisher that will send messages of type String to 
+        # the topic greetings_topic. 
+        # The 10 refers to the message queue size 
+        # (how many messages can be queued before dropping them)
+        self.publisher_ = self.create_publisher(String, 'greetings_topic', 10)
+        timer_period = 1.0  # seconds'
+        
+        # Sets up a timer that calls the timer_callback function every second
+        self.timer = self.create_timer(timer_period, self.timer_callback)
+
+    def timer_callback(self):
+        msg = String() # Creates a new message of type String
+        msg.data = 'Hello, ROS2!' # Sets the message content to 'Hello, ROS2!'
+        self.publisher_.publish(msg) # Publishes the message to the greetings_topic
+        self.get_logger().info(f'Publishing: {msg.data}')
+
+def main(args=None):
+
+    # Initializes the rclpy library, which is required to use ROS 2
+    rclpy.init(args=args) 
+
+    # Creates an instance of the SimplePublisher node.
+    node = SimplePublisher() 
+
+    # Enters a loop where the node keeps running and responds to ROS 2 events 
+    rclpy.spin(node) 
+
+    # Cleans up and shuts down the node.
+    node.destroy_node() 
+
+    # Shuts down the rclpy library when the node stops spinning.
+    rclpy.shutdown() 
+
+if __name__ == '__main__':
+    main()
+</code></pre>
+<p><strong>Subscriber Node (Python)</strong></p>
+<pre><code class="language-python">import rclpy 
+from rclpy.node import Node 
+from std_msgs.msg import String 
+
+# SimplePublisher(Node): Inherits from Node to create 
+# a ROS 2 node called simple_publisher
+class SimpleSubscriber(Node):
+    def __init__(self):
+        super().__init__('simple_subscriber')
+       
+
+        # Creates a subscription to the topic greetings_topic 
+        # where the messages are of type String. 
+        # Whenever a message is received on this topic
+        # the listener_callback function is called
+        self.subscription = self.create_subscription(
+            String,
+            'greetings_topic',
+            self.listener_callback,
+            10) 
+        self.subscription  # prevent unused variable warning
+    
+    # This method is called whenever a message is received on the greetings_topic.
+    def listener_callback(self, msg):
+        self.get_logger().info(f'Subscribed: {msg.data}') 
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = SimpleSubscriber()
+    rclpy.spin(node)
+    node.destroy_node()
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
+</code></pre>
+<blockquote>
+<p>Here, the <code>SimplePublisher</code> node sends a greeting message "Hello, ROS2!" every second on the <code>greetings_topic</code>. The <code>SimpleSubscriber</code> node listens to this topic and prints the message it receives. This simple interaction demonstrates how topics facilitate communication in ROS2.</p>
+</blockquote>
+<p><strong>Expected Output:</strong></p>
+<blockquote>
+<p>When you run the publisher and subscriber nodes, you should see output like this in the console:</p>
+<p><strong>Publisher Node Output:</strong></p>
+<pre><code>[INFO] [SimplePublisher]: Publishing: Hello, ROS2!
+[INFO] [SimplePublisher]: Publishing: Hello, ROS2!
+[INFO] [SimplePublisher]: Publishing: Hello, ROS2!
+</code></pre>
+<p><strong>Subscriber Node Output:</strong></p>
+<pre><code>[INFO] [SimpleSubscriber]: Subscribed: Hello, ROS2!
+[INFO] [SimpleSubscriber]: Subscribed: Hello, ROS2!
+[INFO] [SimpleSubscriber]: Subscribed: Hello, ROS2!
+</code></pre>
+</blockquote>
+<hr />
+<h3 id="ros-cli-commands"><a class="header" href="#ros-cli-commands"><strong>ROS CLI Commands</strong></a></h3>
+<blockquote>
+<p>ROS2 provides a powerful command-line interface (CLI) for interacting with topics. Here are some essential commands that will make your life easier:</p>
+<ul>
+<li>
+<p><strong>Listing Topics</strong></p>
+<pre><code class="language-sh">ros2 topic list
+</code></pre>
+<p>Use this command to see all active topics in your ROS2 system. It’s like scanning for all available radio stations.</p>
+</li>
+<li>
+<p><strong>Echoing Topic Messages</strong></p>
+<pre><code class="language-sh">ros2 topic echo /greetings_topic
+</code></pre>
+<p>This command prints messages being published on a topic in real-time. It’s useful for debugging and monitoring the data flow.</p>
+</li>
+<li>
+<p><strong>Publishing Messages</strong></p>
+<pre><code class="language-sh">ros2 topic pub /greetings_topic std_msgs/String "data: 'Hello from CLI!'"
+</code></pre>
+<p>Manually publish a message to a topic from the command line. It’s a quick way to test your subscribers.</p>
+</li>
+</ul>
+</blockquote>
+<hr />
+<h3 id="why-topics-matter"><a class="header" href="#why-topics-matter"><strong>Why Topics Matter</strong></a></h3>
+<blockquote>
+<p>Understanding topics is crucial because they form the backbone of communication in ROS2. They allow you to build modular, scalable, and efficient robotic systems. Whether it’s a simple robot with a few sensors or a complex multi-robot system, mastering topics will enable you to design robust communication architectures.</p>
+</blockquote>
+<p><em><strong>In part 2 of communication overview, we’ll explore ROS2 Services and Actions, which add even more capabilities to your robotic systems. Stay tuned, and keep experimenting with topics to see how they can enhance your projects!</strong></em></p>
+<hr />
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../../GSWR2/module2/communication_protocols_part1/ros2_communication_overview.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../../../GSWR2/module2/turtlesim_part1/turtlesim_part1.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../../GSWR2/module2/communication_protocols_part1/ros2_communication_overview.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../../../GSWR2/module2/turtlesim_part1/turtlesim_part1.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../../../sidebar.js"></script>
+
+
+    </body>
+</html>

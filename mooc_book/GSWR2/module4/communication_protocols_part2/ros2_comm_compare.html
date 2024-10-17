@@ -1,0 +1,350 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js navy">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>3. Comparing Topics, Services, and Actions - e-Yantra Robotics Competition - ROS2 MOOC</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- 
+        <link rel="icon" href="../../../favicon.svg">
+         -->
+        <link rel="shortcut icon" href="../../../favicon.png">
+        <link rel="stylesheet" href="../../../css/variables.css">
+        <link rel="stylesheet" href="../../../css/general.css">
+        <link rel="stylesheet" href="../../../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../../highlight.css">
+        <link rel="stylesheet" href="../../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../../../style.css">
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../../";
+            var default_theme = "navy";
+            <!-- window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "navy"; -->
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('navy')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../../../welcome.html">Welcome to ROS2 MOOC !</a></li><li class="chapter-item affix "><li class="spacer"></li><li class="chapter-item expanded "><a href="../../../GSWR2/GSWR2_welcome.html">Getting Started With ROS2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../GSWR2/module1/installation_instruction/intro_install.html">Module 1</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../GSWR2/module1/installation_instruction/intro_install.html">Introduction and Installation Setup</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../GSWR2/module1/installation_instruction/humble_installation.html">ROS2 Humble Installation</a></li></ol></li><li class="chapter-item "><a href="../../../GSWR2/module1/ros2_design_concepts/ros2_design_concepts.html">ROS2 Design concepts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../GSWR2/module1/ros2_design_concepts/history_of_ros.html">1. History of ROS</a></li><li class="chapter-item "><a href="../../../GSWR2/module1/ros2_design_concepts/diff_ros_1_and_2.html">2. Differences between ROS1 and ROS2</a></li><li class="chapter-item "><a href="../../../GSWR2/module1/ros2_design_concepts/dds.html">3. Data Distribution Service (DDS)</a></li><li class="chapter-item "><a href="../../../GSWR2/module1/ros2_design_concepts/design_concepts.html">4. ROS2 Design Concepts</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../../GSWR2/module2/ros2_ecosystem_filesystem/ros2_ecosystem_filesystem.html">Module 2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../GSWR2/module2/ros2_ecosystem_filesystem/ros2_ecosystem_filesystem.html">ROS2 Ecosystem and Filesystem</a></li><li class="chapter-item "><a href="../../../GSWR2/module2/key_concepts/key_concepts_of_ros2.html">ROS Key Concepts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../GSWR2/module2/key_concepts/nodes.html">Nodes</a></li><li class="chapter-item "><a href="../../../GSWR2/module2/key_concepts/topics.html">Topics</a></li><li class="chapter-item "><a href="../../../GSWR2/module2/key_concepts/messages.html">Messages</a></li></ol></li><li class="chapter-item "><a href="../../../GSWR2/module2/task/task1.html">Task 1</a></li><li class="chapter-item "><a href="../../../GSWR2/module2/communication_protocols_part1/intro.html">ROS2 Communication Protocols Part 1</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../GSWR2/module2/communication_protocols_part1/ros2_communication_overview.html">1.Introduction to ROS2 Communication Protocols</a></li><li class="chapter-item "><a href="../../../GSWR2/module2/communication_protocols_part1/ros2_topics.html">2. ROS2 Topics</a></li></ol></li><li class="chapter-item "><a href="../../../GSWR2/module2/turtlesim_part1/turtlesim_part1.html">Overview Of Turtlesim</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../GSWR2/module2/turtlesim_part1/1_key_components.html">1. Key Components</a></li><li class="chapter-item "><a href="../../../GSWR2/module2/turtlesim_part1/2_turtle_simulator.html">2. Turtle Simulator</a></li></ol></li><li class="chapter-item "><a href="../../../GSWR2/module2/task/task2.html">Task 2</a></li></ol></li><li class="chapter-item "><a href="../../../GSWR2/module3/ros2_launch_files_running_ros_nodes/ros2_launch_files_running_ros_nodes.html">Module 3</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../GSWR2/module3/ros2_launch_files_running_ros_nodes/ros2_launch_files_running_ros_nodes.html">Launch files and running ROS nodes</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../GSWR2/module3/ros2_launch_files_running_ros_nodes/2_launch_files.html">1. Key Components of Launch Files</a></li><li class="chapter-item "><a href="../../../GSWR2/module3/ros2_launch_files_running_ros_nodes/2_1_launchfile_pubsub.html">2. Creating Launch File for Publisher and Subscriber node</a></li></ol></li><li class="chapter-item "><a href="../../../GSWR2/module3/ros2_RQT_visualisation_CLI_tools/ros2_RQT_visualisation_CLI_tools.html">ROS2 RQT visualisation CLI tools</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../GSWR2/module3/ros2_RQT_visualisation_CLI_tools/1_RQT_visualisation.html">1. RQT visualisation</a></li><li class="chapter-item "><a href="../../../GSWR2/module3/ros2_RQT_visualisation_CLI_tools/2_CLI_tool.html">2. CLI Tools</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../../GSWR2/module4/communication_protocols_part2/ros2_comm_proto.html">Module 4</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../GSWR2/module4/communication_protocols_part2/ros2_services.html">1. service client</a></li><li class="chapter-item "><a href="../../../GSWR2/module4/communication_protocols_part2/ros2_actions.html">2. action</a></li><li class="chapter-item expanded "><a href="../../../GSWR2/module4/communication_protocols_part2/ros2_comm_compare.html" class="active">3. Comparing Topics, Services, and Actions</a></li></ol></li><li class="chapter-item "><a href="../../../GSWR2/module3/ros2_launch_files_running_ros_nodes/ros2_launch_files_running_ros_nodes.html">Module 5</a></li></ol></li><li class="chapter-item "><li class="spacer"></li><li class="chapter-item "><div>Bonus Blogs!</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../bonus_blogs/git_github.html">Git and GitHub</a></li><li class="chapter-item "><a href="../../../bonus_blogs/github_challenge.html">Github Challenge</a></li><li class="chapter-item "><a href="../../../bonus_blogs/coding_std.html">Coding Standards</a></li></ol></li><li class="chapter-item "><li class="spacer"></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <!-- <html>
+ 	<head>
+ 	<style>
+ 		
+ 	@media only screen and (max-width: 600px) {
+ 	  .eyrc_ckt{
+ 			display:none;
+ 		}
+ 	}
+ 
+ 	</style>
+ 	</head>
+ 	<body>
+ 		<div>
+ 		<center></center>
+ 			<div style="display:flex; justify-content:space-between;padding:10px;padding-top:0">
+ 				<div >
+ 					<img src="https://www.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" height="40px" style="padding:10px 15px;" />
+ 				</div>
+ 				<div>
+ 					<img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/maze_bot/assets/eyrc-header.svg" height="80px"  class="eyrc_ckt">
+ 				</div>
+ 				<div style="font-weight:900;font-size:20px;text-align:center;padding:10px 15px">
+ 					e-Yantra<br>
+ 					Robotics Competition
+ 				</div>
+ 			</div>
+ 			
+ 		</div>
+ 	</body>
+ </html>
+ 
+ 
+ -->
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar autohide sticky bordered">
+                    <div style="width:100%">
+                        <html>
+                        	<head>
+                        	<style>
+                        		
+                        	@media only screen and (max-width: 600px) {
+                        	  .eyrc_ckt{
+                        			display:none;
+                        		}
+                        	}
+                        
+                        	</style>
+                        	</head>
+                        	<body>
+                        		<div>
+                        		<center></center>
+                        			<div style="display:flex; justify-content:space-between;padding:10px;padding-top:0">
+                        				<div >
+                        					<img src="https://www.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" height="40px" style="padding:10px 15px;" />
+                        				</div>
+                        				<div>
+                        					<img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/maze_bot/assets/eyrc-header.svg" height="80px"  class="eyrc_ckt">
+                        				</div>
+                        				<div style="font-weight:900;font-size:20px;text-align:center;padding:10px 15px">
+                        					e-Yantra<br>
+                        					Robotics Competition
+                        				</div>
+                        			</div>
+                        			
+                        		</div>
+                        	</body>
+                        </html>
+                        
+                        
+                    </div>
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="space">Space</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">e-Yantra Robotics Competition - ROS2 MOOC</h1>
+
+                    <div class="right-buttons">
+                        <div id="navigation-buttons" type="button" onclick=" window.open('https://portal.e-yantra.org/profile_home', '_blank')">Home</div>
+                        <div id="navigation-buttons" type="button" onclick=" window.open('https://discuss.e-yantra.org/', '_blank')">Forum</div>
+                        <div id="navigation-buttons" type="button" onclick=" window.open('https://portal.e-yantra.org/logout', '_blank')">Logout</div>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!-- <center><img src="http://mooc.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" style="scale:75%;" /></center> -->
+<style>
+.back{
+	position: fixed;
+	width: 250px;
+	height: 250px;
+	top: 50%;
+	left: 50%;
+    margin-top: auto; 
+    margin-left: auto; 
+	opacity: 0.15;
+    z-index: -1;
+	}
+</style>
+<!-- <img src="http://mooc.e-yantra.org/img/EyantraLogoMini.png" class="back"> -->
+<center>
+    <h1 id="comparing-topics-services-and-actions-in-ros2"><a class="header" href="#comparing-topics-services-and-actions-in-ros2">Comparing Topics, Services, and Actions in ROS2</a></h1>
+</center>
+<hr />
+<h3 id="introduction"><a class="header" href="#introduction">Introduction</a></h3>
+<blockquote>
+<p>In the ROS2 ecosystem, communication between nodes is facilitated through three primary mechanisms: Topics, Services, and Actions. Each of these communication paradigms serves distinct purposes and is suited for different use case scenarios. Understanding when to use each mechanism is crucial for building efficient and effective robotic applications.</p>
+</blockquote>
+<h3 id="use-case-scenarios"><a class="header" href="#use-case-scenarios">Use Case Scenarios</a></h3>
+<h4 id="when-to-use-topics"><a class="header" href="#when-to-use-topics">When to Use Topics</a></h4>
+<p><strong>Topics</strong> are used for continuous, asynchronous data streaming. They are ideal for scenarios where data needs to be published at a regular rate and multiple subscribers may be interested in the data.</p>
+<p><strong>Common Use Cases</strong>:</p>
+<ul>
+<li><strong>Sensor Data Streaming</strong>: For example, a camera node publishing image data or a LiDAR node publishing point cloud data.</li>
+<li><strong>Telemetry and Status Updates</strong>: Nodes publishing their status or telemetry data, such as battery levels or robot position.</li>
+<li><strong>Control Commands</strong>: Sending high-frequency control commands to actuators or motors.</li>
+</ul>
+<p><strong>Example</strong>:</p>
+<blockquote>
+<p>A LiDAR sensor node publishes a point cloud data stream on the /lidar_points topic, and multiple nodes subscribe to this topic to process the data for mapping, obstacle detection, and navigation.</p>
+</blockquote>
+<h4 id="when-to-use-services"><a class="header" href="#when-to-use-services">When to Use Services</a></h4>
+<p><strong>Services</strong> are used for synchronous, request-response interactions. They are suited for scenarios where a node needs to request a specific operation and wait for the result.</p>
+<p><strong>Common Use Cases</strong>:</p>
+<ul>
+<li><strong>Configuration Changes</strong>: Requesting a change in the configuration of a node, such as changing a parameter or mode of operation.</li>
+<li><strong>Specific Queries</strong>: Requesting specific data or performing a computation that does not need to happen continuously.</li>
+<li><strong>Triggering Actions</strong>: Performing discrete actions that require confirmation, such as opening a gripper or starting a recording.</li>
+</ul>
+<p><strong>Example</strong>:
+A client node sends a request to a service server to add two integers. The server processes the request and returns the result to the client.</p>
+<h4 id="when-to-use-actions"><a class="header" href="#when-to-use-actions">When to Use Actions</a></h4>
+<p><strong>Actions</strong> are used for long-running tasks that require feedback and can be preempted. They are suitable for operations that take a considerable amount of time and where progress updates or the ability to cancel the task is necessary.</p>
+<p><strong>Common Use Cases</strong>:</p>
+<ul>
+<li><strong>Navigation Tasks</strong>: Moving a robot to a specified location with feedback on the progress and the ability to cancel the task if needed.</li>
+<li><strong>Manipulation Tasks</strong>: Performing complex manipulations such as picking and placing objects where intermediate feedback and the ability to preempt the task are essential.</li>
+<li><strong>Data Processing Tasks</strong>: Long-running data processing tasks that can provide updates on progress and can be stopped if required.</li>
+</ul>
+<p><strong>Example</strong>:
+A navigation action server receives a goal to move the robot to a specified location. The server provides continuous feedback on the robot's position and allows the client to cancel the goal if necessary.</p>
+<h3 id="comparative-analysis"><a class="header" href="#comparative-analysis">Comparative Analysis</a></h3>
+<h4 id="latency"><a class="header" href="#latency">Latency</a></h4>
+<ul>
+<li><strong>Topics</strong>: Generally low latency due to the asynchronous nature of message passing. Suitable for high-frequency data streams.</li>
+<li><strong>Services</strong>: Latency depends on the request-processing time. It can be higher than topics because the client waits for the server's response.</li>
+<li><strong>Actions</strong>: Latency includes both the initial request and the ongoing feedback. While initial communication might have latency similar to services, the continuous feedback loop can introduce additional delays.</li>
+</ul>
+<h4 id="reliability"><a class="header" href="#reliability">Reliability</a></h4>
+<ul>
+<li><strong>Topics</strong>: Reliability can be affected by network conditions. QoS (Quality of Service) settings can be configured to improve reliability, such as setting up reliable or best-effort delivery.</li>
+<li><strong>Services</strong>: More reliable for individual transactions as the client waits for a response. However, it might suffer from higher latency if the server is busy or the request is complex.</li>
+<li><strong>Actions</strong>: Designed to handle long-running tasks with feedback and preemption, making them inherently more complex but reliable for tasks that require monitoring and potential cancellation.</li>
+</ul>
+<h4 id="complexity"><a class="header" href="#complexity">Complexity</a></h4>
+<ul>
+<li><strong>Topics</strong>: Simplest form of communication in ROS2. Easy to set up and use for streaming data.</li>
+<li><strong>Services</strong>: Moderately complex due to the need for request-response handling. Suitable for discrete tasks requiring confirmation.</li>
+<li><strong>Actions</strong>: Most complex due to the requirement for feedback and preemption mechanisms. Ideal for long-running tasks that need monitoring and control.</li>
+</ul>
+<h3 id="conclusion"><a class="header" href="#conclusion">Conclusion</a></h3>
+<blockquote>
+<p>Choosing between Topics, Services, and Actions in ROS2 depends on the specific requirements of your application. Topics are ideal for continuous data streaming with low latency needs. Services are suitable for synchronous request-response interactions where reliability for discrete tasks is important. Actions are the best choice for long-running tasks that require feedback and the ability to be preempted. By understanding the strengths and weaknesses of each communication mechanism, you can design more efficient and robust robotic systems.</p>
+</blockquote>
+<hr />
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../../GSWR2/module4/communication_protocols_part2/ros2_actions.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../../../GSWR2/module3/ros2_launch_files_running_ros_nodes/ros2_launch_files_running_ros_nodes.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../../GSWR2/module4/communication_protocols_part2/ros2_actions.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../../../GSWR2/module3/ros2_launch_files_running_ros_nodes/ros2_launch_files_running_ros_nodes.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../../../sidebar.js"></script>
+
+
+    </body>
+</html>
