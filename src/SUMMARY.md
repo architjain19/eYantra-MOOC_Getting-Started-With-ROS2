@@ -44,7 +44,10 @@
       - [1. service client](GSWR2/module4/communication_protocols_part2/ros2_services.md)
       - [2. action](GSWR2/module4/communication_protocols_part2/ros2_actions.md)
       - [3. Comparing Topics, Services, and Actions](GSWR2/module4/communication_protocols_part2/ros2_comm_compare.md)
-
+      - [Turtlesim Part 2](GSWR2/module4/turtlesim_part2/ros2_overview_of_turtlesim.md)
+        - [1. Creating a Second Turtle](GSWR2/module4/turtlesim_part2/creating_second_turtle.md)
+        - [2. Controlling a 2D Turtle with Twist Messages](GSWR2/module4/turtlesim_part2/controlling_2D_turtle_twist_messages.md)
+      - [Task 3](GSWR2/module4/task/task3.md)
   
   - [Module 5](GSWR2/module3/ros2_launch_files_running_ros_nodes/ros2_launch_files_running_ros_nodes.md) 
 
@@ -59,11 +62,6 @@
  -->
 
 
-  <!-- - [Overview Of Turtlesim](GSWR2/ros2_overview_of_turtlesim/ros2_overview_of_turtlesim.md)
-    - [1. Key Components](GSWR2/ros2_overview_of_turtlesim/1_key_components.md)
-    - [2. Turtle Simulator](GSWR2/ros2_overview_of_turtlesim/2_turtle_simulator.md)
-    - [3. Creating a Second Turtle](GSWR2/ros2_overview_of_turtlesim/3_creating_second_turtle.md)
-    - [4. Controlling a 2D Turtle with Twist Messages](GSWR2/ros2_overview_of_turtlesim/4_controlling_2D_turtle_twist_messages.md)  -->
 
 ---
 
